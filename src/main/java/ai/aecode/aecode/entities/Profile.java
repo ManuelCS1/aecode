@@ -1,7 +1,5 @@
 package ai.aecode.aecode.entities;
-
 import jakarta.persistence.*;
-
 import java.time.LocalDateTime;
 
 @Entity
@@ -19,22 +17,16 @@ public class Profile {
     private String username;
     @Column(name="profile_password", length=15, nullable=false)
     private String profile_password;
-    @Column(name="profile_creation_date")
-    private LocalDateTime profile_creation_date;
-    @Column(name="profile_last_session")
-    private LocalDateTime profile_last_session;
 
     public Profile() {
     }
 
-    public Profile(int id_profile, Role role, String profile_email, String username, String profile_password, LocalDateTime profile_creation_date, LocalDateTime profile_last_session) {
+    public Profile(int id_profile, Role role, String profile_email, String username, String profile_password) {
         this.id_profile = id_profile;
         this.role = role;
         this.profile_email = profile_email;
         this.username = username;
         this.profile_password = profile_password;
-        this.profile_creation_date = profile_creation_date;
-        this.profile_last_session = profile_last_session;
     }
 
     public int getId_profile() {
@@ -77,19 +69,4 @@ public class Profile {
         this.profile_password = profile_password;
     }
 
-    public LocalDateTime getProfile_creation_date() {
-        return profile_creation_date;
-    }
-
-    public void setProfile_creation_date(LocalDateTime profile_creation_date) {
-        this.profile_creation_date = profile_creation_date;
-    }
-
-    public LocalDateTime getProfile_last_session() {
-        return profile_last_session;
-    }
-
-    public void setProfile_last_session(LocalDateTime profile_last_session) {
-        this.profile_last_session = profile_last_session;
-    }
 }
