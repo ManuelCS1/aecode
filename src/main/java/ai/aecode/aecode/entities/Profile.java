@@ -19,9 +19,9 @@ public class Profile {
     private String username;
     @Column(name="profile_password", length=15, nullable=false)
     private String profile_password;
-    @Column(name="profile_creation_date", nullable=false)
+    @Column(name="profile_creation_date")
     private LocalDateTime profile_creation_date;
-    @Column(name="profile_last_session", nullable=false)
+    @Column(name="profile_last_session")
     private LocalDateTime profile_last_session;
 
     public Profile() {
@@ -81,9 +81,8 @@ public class Profile {
         return profile_creation_date;
     }
 
-    @PrePersist
-    public void setProfile_creation_date( ) {
-        this.profile_creation_date = LocalDateTime.now();
+    public void setProfile_creation_date(LocalDateTime profile_creation_date) {
+        this.profile_creation_date = profile_creation_date;
     }
 
     public LocalDateTime getProfile_last_session() {
