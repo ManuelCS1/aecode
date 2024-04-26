@@ -1,10 +1,16 @@
 package ai.aecode.aecode.dtos;
 
 import ai.aecode.aecode.entities.Role;
+import jakarta.persistence.Column;
+
+import java.time.LocalDate;
 
 public class ProfileDTO {
     private int id_profile;
     private Role role;
+    private String profile_Fullname;
+    private String profile_Gender;
+    private LocalDate profile_Birthdate;
     private String profile_email;
     private String username;
     private String profile_password;
@@ -23,6 +29,30 @@ public class ProfileDTO {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    public String getProfile_Fullname() {
+        return profile_Fullname;
+    }
+
+    public void setProfile_Fullname(String profile_Fullname) {
+        this.profile_Fullname = profile_Fullname;
+    }
+
+    public String getProfile_Gender() {
+        return profile_Gender;
+    }
+
+    public void setProfile_Gender(String profile_Gender) {
+        this.profile_Gender = profile_Gender;
+    }
+
+    public LocalDate getProfile_Birthdate() {
+        return profile_Birthdate;
+    }
+
+    public void setProfile_Birthdate(LocalDate profile_Birthdate) {
+        this.profile_Birthdate = profile_Birthdate;
     }
 
     public String getProfile_email() {

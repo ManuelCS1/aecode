@@ -1,22 +1,15 @@
 package ai.aecode.aecode.dtos;
 
 import ai.aecode.aecode.entities.Profile;
-import jakarta.persistence.Column;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
 
 import java.time.LocalDate;
 
 public class Profile_detailDTO {
     private int id_ProfileDetail;
     private Profile profile;
-    private String detail_Name;
-    private String detail_Lastname;
     private String detail_Country;
     private String detail_City;
     private String detail_Phone;
-    private LocalDate detail_Birthdate;
-    private String detail_Gender;
     private String detail_ProfilePicture;
     private String detail_Biography;
 
@@ -36,21 +29,6 @@ public class Profile_detailDTO {
         this.profile = profile;
     }
 
-    public String getDetail_Name() {
-        return detail_Name;
-    }
-
-    public void setDetail_Name(String detail_Name) {
-        this.detail_Name = detail_Name;
-    }
-
-    public String getDetail_Lastname() {
-        return detail_Lastname;
-    }
-
-    public void setDetail_Lastname(String detail_Lastname) {
-        this.detail_Lastname = detail_Lastname;
-    }
 
     public String getDetail_Country() {
         return detail_Country;
@@ -74,22 +52,6 @@ public class Profile_detailDTO {
 
     public void setDetail_Phone(String detail_Phone) {
         this.detail_Phone = detail_Phone;
-    }
-
-    public LocalDate getDetail_Birthdate() {
-        return detail_Birthdate;
-    }
-
-    public void setDetail_Birthdate(LocalDate detail_Birthdate) {
-        this.detail_Birthdate = detail_Birthdate;
-    }
-
-    public String getDetail_Gender() {
-        return detail_Gender;
-    }
-
-    public void setDetail_Gender(String detail_Gender) {
-        this.detail_Gender = detail_Gender;
     }
 
     public String getDetail_ProfilePicture() {
