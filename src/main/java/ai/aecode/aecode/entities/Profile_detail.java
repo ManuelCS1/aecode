@@ -13,23 +13,23 @@ public class Profile_detail {
     @OneToOne
     @JoinColumn(name = "id_profile")
     private Profile profile;
-    @Column(name="detail_Name", length=15, nullable = false)
+    @Column(name="detail_Name", length=20, nullable = false)
     private String detail_Name;
-    @Column(name="detail_Lastname", length=15, nullable = false)
+    @Column(name="detail_Lastname", length=20, nullable = false)
     private String detail_Lastname;
-    @Column(name="detail_Country", length=15, nullable = false)
+    @Column(name="detail_Country", length=20, nullable = false)
     private String detail_Country;
-    @Column(name="detail_City", length=15, nullable = false)
+    @Column(name="detail_City", length=20, nullable = false)
     private String detail_City;
     @Column(name="detail_Phone", length=15, nullable = false)
     private String detail_Phone;
     @Column(name="detail_Birthdate", nullable = false)
     private LocalDate detail_Birthdate;
-    @Column(name="detail_Gender", length=1, nullable = false)
+    @Column(name="detail_Gender", length=10, nullable = false)
     private String detail_Gender;
-    @Column(name="detail_ProfilePicture", length=50, nullable = false)
+    @Column(name="detail_ProfilePicture", length=244, nullable = false)
     private String detail_ProfilePicture;
-    @Column(name="detail_Biography", length=100, nullable = false)
+    @Column(name="detail_Biography", length=244, nullable = false)
     private String detail_Biography;
 
     public Profile_detail() {
