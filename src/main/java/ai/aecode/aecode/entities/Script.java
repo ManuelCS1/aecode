@@ -37,10 +37,6 @@ public class Script {
     private String script_multimedia;
     @Column(name="script_description", length=254)
     private String script_description;
-    @Column(name="script_creation_date", nullable = false)
-    private LocalDateTime script_creation_date;
-    @Column(name="script_update_date", nullable = false)
-    private LocalDateTime script_update_date;
     @Column(name="script_price")
     private Double script_price;
 
@@ -48,7 +44,7 @@ public class Script {
     }
 
 
-    public Script(int id_script, ProgLang proglang, Plan plan, Currency currency, Software software, Tag tag, Profile profile, String script_name, String script_file, String script_multimedia, String script_description, LocalDateTime script_creation_date, LocalDateTime script_update_date, Double script_price) {
+    public Script(int id_script, ProgLang proglang, Plan plan, Currency currency, Software software, Tag tag, Profile profile, String script_name, String script_file, String script_multimedia, String script_description, Double script_price) {
         this.id_script = id_script;
         this.proglang = proglang;
         this.plan = plan;
@@ -60,8 +56,6 @@ public class Script {
         this.script_file = script_file;
         this.script_multimedia = script_multimedia;
         this.script_description = script_description;
-        this.script_creation_date = script_creation_date;
-        this.script_update_date = script_update_date;
         this.script_price = script_price;
     }
 
@@ -151,23 +145,6 @@ public class Script {
 
     public void setScript_description(String script_description) {
         this.script_description = script_description;
-    }
-
-    public LocalDateTime getScript_creation_date() {
-        return script_creation_date;
-    }
-
-    @PrePersist
-    public void setScript_creation_date() {
-        this.script_creation_date = LocalDateTime.now();
-    }
-
-    public LocalDateTime getScript_update_date() {
-        return script_update_date;
-    }
-
-    public void setScript_update_date(LocalDateTime script_update_date) {
-        this.script_update_date = script_update_date;
     }
 
     public Double getScript_price() {
