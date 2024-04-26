@@ -17,8 +17,6 @@ public class ScriptDTO {
     private String script_file;
     private String script_multimedia;
     private String script_description;
-    private LocalDateTime script_creation_date;
-    private LocalDateTime script_update_date;
     private Double script_price;
 
     public int getId_script() {
@@ -107,22 +105,6 @@ public class ScriptDTO {
 
     public void setScript_description(String script_description) {
         this.script_description = script_description;
-    }
-
-    public LocalDateTime getScript_creation_date() {
-        return script_creation_date;
-    }
-
-    public void setScript_creation_date(LocalDateTime script_creation_date) {
-        this.script_creation_date = script_creation_date;
-    }
-
-    public LocalDateTime getScript_update_date() {
-        return script_update_date;
-    }
-
-    public void setScript_update_date(LocalDateTime script_update_date) {
-        this.script_update_date = script_update_date;
     }
 
     public Double getScript_price() {
