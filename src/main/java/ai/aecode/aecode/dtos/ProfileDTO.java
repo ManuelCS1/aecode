@@ -1,7 +1,6 @@
 package ai.aecode.aecode.dtos;
 
 import ai.aecode.aecode.entities.Role;
-import java.time.LocalDateTime;
 
 public class ProfileDTO {
     private int id_profile;
