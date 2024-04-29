@@ -13,8 +13,6 @@ import java.io.IOException;
 public class CORS implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        // TODO Auto-generated method stub
-
     }
 
     @Override
