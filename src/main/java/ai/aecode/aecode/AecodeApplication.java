@@ -18,7 +18,7 @@ public class AecodeApplication {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**").allowedOrigins("https://aecode.onrender.com/").allowedMethods("*").allowedHeaders("*");
+                registry.addMapping("/**").allowedOrigins("/**").allowedMethods("*").allowedHeaders("*");
             }
         };
     }
