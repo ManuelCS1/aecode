@@ -1,7 +1,6 @@
 package ai.aecode.aecode.servicesimplement;
 
 import ai.aecode.aecode.entities.Interaction;
-import ai.aecode.aecode.entities.Role;
 import ai.aecode.aecode.repositories.IInteractionRepository;
 import ai.aecode.aecode.services.IInteractionService;
 import org.springframework.beans.factory.annotation.Autowired;
