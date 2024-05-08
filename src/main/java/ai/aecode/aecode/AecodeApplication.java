@@ -19,7 +19,7 @@ public class AecodeApplication {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("https://aecode.onrender.com")
+                        .allowedOrigins("https://main--aecode-2.netlify.app","https://aecode.onrender.com")
                         .allowedMethods("*")
                         .allowedHeaders("*");
             }
