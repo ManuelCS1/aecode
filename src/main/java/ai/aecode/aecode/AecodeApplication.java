@@ -19,9 +19,11 @@ public class AecodeApplication {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("https://main--aecode-2.netlify.app","https://aecode.onrender.com")
-                        .allowedMethods("*")
-                        .allowedHeaders("*");
+                        .allowedOrigins("https://main--aecode-2.netlify.app")
+                        .allowedMethods("GET", "POST", "PUT", "DELETE")
+                        .allowedHeaders("*")
+                        .allowCredentials(true)
+                        .maxAge(3600);
             }
         };
     }
