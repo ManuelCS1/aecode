@@ -9,5 +9,5 @@ public interface IProfileService {
     List<Profile> list();
     public void delete(int id_profile);
     public Profile listId(int id_profile);
-
+    public Profile findByUsernameOrEmail(String username, String email);
 }

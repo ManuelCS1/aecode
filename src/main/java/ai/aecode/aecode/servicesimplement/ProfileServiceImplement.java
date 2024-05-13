@@ -30,4 +30,9 @@ public class ProfileServiceImplement implements IProfileService {
     public Profile listId(int id_profile) {
         return pR.findById(id_profile).orElse(new Profile());
     }
+
+    @Override
+    public Profile findByUsernameOrEmail(String username, String email) {
+        return pR.findByUsernameOrEmail(username, email);
+    }
 }

@@ -5,6 +5,7 @@ import ai.aecode.aecode.entities.Profile;
 import ai.aecode.aecode.services.IProfileService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -46,6 +47,17 @@ public class ProfileController {
         ModelMapper m = new ModelMapper();
         Profile p = m.map(dto, Profile.class);
         pS.insert(p);
+    }
+
+    //Definir logica para Query para verificar credenciales de inicio de sesion
+    @PostMapping("/login")
+    public ResponseEntity<String> login(@RequestBody ProfileDTO dto) {
+        Profile profile = pS.findByUsernameOrEmail(dto.getUsername(), dto.getProfile_email());
+        if (profile != null && profile.getProfile_password().equals(dto.getProfile_password())) {
+            return ResponseEntity.ok("Credenciales válidas");
+        } else {
+            return ResponseEntity.badRequest().body("Credenciales inválidas");
+        }
     }
 
 }
