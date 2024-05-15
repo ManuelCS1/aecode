@@ -2,6 +2,8 @@ package ai.aecode.aecode.entities;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name="profile_detail")
 public class Profile_detail {
@@ -17,17 +19,21 @@ public class Profile_detail {
     private String detail_City;
     @Column(name="detail_Phone", length=15, nullable = false)
     private String detail_Phone;
-
-
     @Column(name="detail_ProfilePicture", length=244, nullable = false)
     private String detail_ProfilePicture;
     @Column(name="detail_Biography", length=244, nullable = false)
     private String detail_Biography;
 
+    @ManyToMany
+    @JoinTable(name = "detail_specialties",
+            joinColumns = @JoinColumn(name = "id_ProfileDetail"),
+            inverseJoinColumns = @JoinColumn(name = "id_speciality"))
+    private Set<Speciality> specialities;
+
     public Profile_detail() {
     }
 
-    public Profile_detail(int id_ProfileDetail, Profile profile, String detail_Country, String detail_City, String detail_Phone, String detail_ProfilePicture, String detail_Biography) {
+    public Profile_detail(int id_ProfileDetail, Profile profile, String detail_Country, String detail_City, String detail_Phone, String detail_ProfilePicture, String detail_Biography, Set<Speciality> specialities) {
         this.id_ProfileDetail = id_ProfileDetail;
         this.profile = profile;
         this.detail_Country = detail_Country;
@@ -35,6 +41,7 @@ public class Profile_detail {
         this.detail_Phone = detail_Phone;
         this.detail_ProfilePicture = detail_ProfilePicture;
         this.detail_Biography = detail_Biography;
+        this.specialities = specialities;
     }
 
     public int getId_ProfileDetail() {
@@ -91,5 +98,13 @@ public class Profile_detail {
 
     public void setDetail_Biography(String detail_Biography) {
         this.detail_Biography = detail_Biography;
+    }
+
+    public Set<Speciality> getSpecialities() {
+        return specialities;
+    }
+
+    public void setSpecialities(Set<Speciality> specialities) {
+        this.specialities = specialities;
     }
 }

@@ -52,7 +52,7 @@ public class ProfileController {
     //Definir logica para Query para verificar credenciales de inicio de sesion
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody ProfileDTO dto) {
-        Profile profile = pS.findByUsernameOrEmail(dto.getUsername(), dto.getProfile_email());
+        Profile profile = pS.findByUsernameOrEmail( dto.getProfile_email());
         if (profile != null && profile.getProfile_password().equals(dto.getProfile_password())) {
             return ResponseEntity.ok("Credenciales válidas");
         } else {

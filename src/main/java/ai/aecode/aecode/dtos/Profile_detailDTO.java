@@ -1,8 +1,10 @@
 package ai.aecode.aecode.dtos;
 
 import ai.aecode.aecode.entities.Profile;
+import ai.aecode.aecode.entities.Speciality;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 public class Profile_detailDTO {
     private int id_ProfileDetail;
@@ -12,6 +14,7 @@ public class Profile_detailDTO {
     private String detail_Phone;
     private String detail_ProfilePicture;
     private String detail_Biography;
+    private Set<Speciality> specialities;
 
     public int getId_ProfileDetail() {
         return id_ProfileDetail;
@@ -68,5 +71,13 @@ public class Profile_detailDTO {
 
     public void setDetail_Biography(String detail_Biography) {
         this.detail_Biography = detail_Biography;
+    }
+
+    public Set<Speciality> getSpecialities() {
+        return specialities;
+    }
+
+    public void setSpecialities(Set<Speciality> specialities) {
+        this.specialities = specialities;
     }
 }

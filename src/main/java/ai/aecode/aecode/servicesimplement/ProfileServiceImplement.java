@@ -32,7 +32,7 @@ public class ProfileServiceImplement implements IProfileService {
     }
 
     @Override
-    public Profile findByUsernameOrEmail(String username, String email) {
-        return pR.findByUsernameOrEmail(username, email);
+    public Profile findByUsernameOrEmail(String email) {
+        return pR.findByUsernameOrEmail(email);
     }
 }

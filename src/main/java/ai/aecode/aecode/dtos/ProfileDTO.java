@@ -12,7 +12,6 @@ public class ProfileDTO {
     private String profile_Gender;
     private LocalDate profile_Birthdate;
     private String profile_email;
-    private String username;
     private String profile_password;
 
     public int getId_profile() {
@@ -61,14 +60,6 @@ public class ProfileDTO {
 
     public void setProfile_email(String profile_email) {
         this.profile_email = profile_email;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public String getProfile_password() {
