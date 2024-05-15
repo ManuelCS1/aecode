@@ -1,8 +1,5 @@
 package ai.aecode.aecode.dtos;
-
 import ai.aecode.aecode.entities.Role;
-import jakarta.persistence.Column;
-
 import java.time.LocalDate;
 
 public class ProfileDTO {

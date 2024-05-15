@@ -1,5 +1,6 @@
 package ai.aecode.aecode.controllers;
 
+import ai.aecode.aecode.dtos.LoginDTO;
 import ai.aecode.aecode.dtos.ProfileDTO;
 import ai.aecode.aecode.entities.Profile;
 import ai.aecode.aecode.services.IProfileService;
@@ -51,7 +52,7 @@ public class ProfileController {
 
     //Definir logica para Query para verificar credenciales de inicio de sesion
     @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody ProfileDTO dto) {
+    public ResponseEntity<String> login(@RequestBody LoginDTO dto) {
         Profile profile = pS.findByUsernameOrEmail( dto.getProfile_email());
         if (profile != null && profile.getProfile_password().equals(dto.getProfile_password())) {
             return ResponseEntity.ok("Credenciales válidas");
