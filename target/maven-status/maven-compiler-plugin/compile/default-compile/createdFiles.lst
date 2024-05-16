@@ -1,4 +1,5 @@
 ai\aecode\aecode\controllers\PostController.class
+ai\aecode\aecode\dtos\LoginDTO.class
 ai\aecode\aecode\entities\Speciality.class
 ai\aecode\aecode\services\IInteractionService.class
 ai\aecode\aecode\controllers\RoleController.class
