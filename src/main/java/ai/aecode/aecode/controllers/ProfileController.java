@@ -53,7 +53,7 @@ public class ProfileController {
     public void update(@RequestBody ProfileDTO dto) {
         ModelMapper m = new ModelMapper();
         Profile p = m.map(dto, Profile.class);
-        pS.insert(p);
+        pS.update(p);
     }
 
     //Definir logica para Query para verificar credenciales de inicio de sesion

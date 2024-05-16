@@ -37,6 +37,11 @@ public class ProfileServiceImplement implements IProfileService {
     }
 
     @Override
+    public void update(Profile profile) {
+        pR.save(profile);
+    }
+
+    @Override
     public Profile findByUsernameOrEmail(LoginDTO logindto) {
         return pR.findByUsernameOrEmail(logindto.getProfile_email());
     }
