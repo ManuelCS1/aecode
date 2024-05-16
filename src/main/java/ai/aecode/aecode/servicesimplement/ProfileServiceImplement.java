@@ -1,5 +1,6 @@
 package ai.aecode.aecode.servicesimplement;
 
+import ai.aecode.aecode.dtos.LoginDTO;
 import ai.aecode.aecode.entities.Profile;
 import ai.aecode.aecode.repositories.IProfileRepository;
 import ai.aecode.aecode.services.IProfileService;
@@ -14,7 +15,11 @@ public class ProfileServiceImplement implements IProfileService {
     private IProfileRepository pR;
 
     @Override
-    public void insert(Profile profile) { pR.save(profile);}
+    public void insert(Profile profile) {
+        if (pR.existsByProfile_email(profile.getProfile_email())) {
+            throw new RuntimeException("El correo electrónico ya está en uso");
+        }
+        pR.save(profile);}
 
     @Override
     public List<Profile> list() {
@@ -32,7 +37,7 @@ public class ProfileServiceImplement implements IProfileService {
     }
 
     @Override
-    public Profile findByUsernameOrEmail(String email) {
-        return pR.findByUsernameOrEmail(email);
+    public Profile findByUsernameOrEmail(LoginDTO logindto) {
+        return pR.findByUsernameOrEmail(logindto.getProfile_email());
     }
 }

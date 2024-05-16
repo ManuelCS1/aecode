@@ -6,6 +6,7 @@ import ai.aecode.aecode.entities.Profile;
 import ai.aecode.aecode.services.IProfileService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,10 +21,15 @@ public class ProfileController {
     private IProfileService pS;
 
     @PostMapping
-    public void insert(@RequestBody ProfileDTO dto){
+    public ResponseEntity<String> insert(@RequestBody ProfileDTO dto){
         ModelMapper m=new ModelMapper();
         Profile p= m.map(dto, Profile.class);
-        pS.insert(p);
+        try {
+            pS.insert(p);
+            return ResponseEntity.status(HttpStatus.CREATED).body("Perfil creado exitosamente");
+        } catch (RuntimeException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
     }
 
     @GetMapping
@@ -53,7 +59,7 @@ public class ProfileController {
     //Definir logica para Query para verificar credenciales de inicio de sesion
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody LoginDTO dto) {
-        Profile profile = pS.findByUsernameOrEmail( dto.getProfile_email());
+        Profile profile = pS.findByUsernameOrEmail( dto);
         if (profile != null && profile.getProfile_password().equals(dto.getProfile_password())) {
             return ResponseEntity.ok("Credenciales válidas");
         } else {
