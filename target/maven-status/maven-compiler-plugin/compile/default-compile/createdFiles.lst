@@ -18,11 +18,13 @@ ai\aecode\aecode\servicesimplement\Profile_detailServiceImplement.class
 ai\aecode\aecode\servicesimplement\CourseServiceImplement.class
 ai\aecode\aecode\dtos\PostDTO.class
 ai\aecode\aecode\repositories\ICourseRepository.class
+ai\aecode\aecode\services\ICommentService.class
 ai\aecode\aecode\servicesimplement\ProfileServiceImplement.class
 ai\aecode\aecode\entities\Profile_detail.class
 ai\aecode\aecode\repositories\IInteractionRepository.class
 ai\aecode\aecode\servicesimplement\InteractionServiceImplement.class
 ai\aecode\aecode\servicesimplement\ScriptServiceImplement.class
+ai\aecode\aecode\repositories\ICommentRepository.class
 ai\aecode\aecode\dtos\InteractionDTO.class
 ai\aecode\aecode\dtos\Profile_detailDTO.class
 ai\aecode\aecode\entities\ProgLang.class
@@ -32,7 +34,9 @@ ai\aecode\aecode\dtos\ScriptDTO.class
 ai\aecode\aecode\AecodeApplication.class
 ai\aecode\aecode\entities\Course.class
 ai\aecode\aecode\entities\Role.class
+ai\aecode\aecode\entities\Comment.class
 ai\aecode\aecode\entities\Software.class
+ai\aecode\aecode\dtos\CommentDTO.class
 ai\aecode\aecode\entities\Interaction.class
 ai\aecode\aecode\config\CorsConfig.class
 ai\aecode\aecode\ServletInitializer.class

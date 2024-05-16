@@ -13,6 +13,7 @@ C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\a
 C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\services\IProfileService.java
 C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\dtos\CourseDTO.java
 C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\entities\Plan.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\repositories\ICommentRepository.java
 C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\RoleServiceImplement.java
 C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\services\IPostService.java
 C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\InteractionServiceImplement.java
@@ -32,6 +33,8 @@ C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\a
 C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\services\IProfile_detailService.java
 C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\dtos\InteractionDTO.java
 C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\entities\Interaction.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\entities\Comment.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\services\ICommentService.java
 C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\config\CorsConfig.java
 C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\entities\Currency.java
 C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\repositories\ICourseRepository.java
@@ -43,6 +46,7 @@ C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\a
 C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\entities\Profile.java
 C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\repositories\IProfile_detailRepository.java
 C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\Profile_detailServiceImplement.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\dtos\CommentDTO.java
 C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\ServletInitializer.java
 C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\dtos\Profile_detailDTO.java
 C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\entities\Course.java
