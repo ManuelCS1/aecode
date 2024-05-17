@@ -7,6 +7,10 @@ import ai.aecode.aecode.services.ICommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -32,5 +36,14 @@ public class CommentServiceImplement implements ICommentService {
     @Override
     public Comment listId(int id_comment) {
         return cR.findById(id_comment).orElse(new Comment());
+    }
+
+    @Override
+    public void update(Comment comment) {
+        if (comment.getComment_date() == null) {
+            // Actualiza la fecha y hora al momento actual
+            comment.setComment_date(new Date());
+        }
+        cR.save(comment);
     }
 }

@@ -58,14 +58,16 @@ public class ProfileController {
 
     //Definir logica para Query para verificar credenciales de inicio de sesion
     @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody LoginDTO dto) {
+    public ResponseEntity<Profile> login(@RequestBody LoginDTO dto) {
         Profile profile = pS.findByUsernameOrEmail( dto);
         if (profile != null && profile.getProfile_password().equals(dto.getProfile_password())) {
             dto.setId_profile(profile.getId_profile());
-            return ResponseEntity.ok("Credenciales válidas");
+            return ResponseEntity.ok(profile); // Devuelve el objeto LoginDTO con el ID de perfil actualizado
         } else {
-            return ResponseEntity.badRequest().body("Credenciales inválidas");
+            return ResponseEntity.badRequest().body(null); // En caso de credenciales inválidas, puedes devolver null o un objeto vacío
         }
     }
+
+
 
 }

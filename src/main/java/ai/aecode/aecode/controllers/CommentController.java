@@ -44,7 +44,7 @@ public class CommentController {
     public void update(@RequestBody CommentDTO dto) {
         ModelMapper m = new ModelMapper();
         Comment c = m.map(dto, Comment.class);
-        cS.insert(c);
+        cS.update(c);
     }
 
 }

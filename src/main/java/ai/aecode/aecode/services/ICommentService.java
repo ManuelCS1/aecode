@@ -11,4 +11,5 @@ public interface ICommentService {
     List<Comment> list();
     public void delete(int id_comment);
     public Comment listId(int id_comment);
+    public void update(Comment comment);
 }
