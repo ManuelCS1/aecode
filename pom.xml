@@ -69,6 +69,14 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- Dependencia para previsualizar el pdf subido -->
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>2.0.23</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>

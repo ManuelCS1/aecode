@@ -61,6 +61,7 @@ public class ProfileController {
     public ResponseEntity<String> login(@RequestBody LoginDTO dto) {
         Profile profile = pS.findByUsernameOrEmail( dto);
         if (profile != null && profile.getProfile_password().equals(dto.getProfile_password())) {
+            dto.setId_profile(profile.getId_profile());
             return ResponseEntity.ok("Credenciales válidas");
         } else {
             return ResponseEntity.badRequest().body("Credenciales inválidas");

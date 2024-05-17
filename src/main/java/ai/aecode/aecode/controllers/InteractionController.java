@@ -45,8 +45,8 @@ public class InteractionController {
     @PutMapping
     public void update(@RequestBody InteractionDTO dto) {
         ModelMapper m = new ModelMapper();
-        Interaction p = m.map(dto, Interaction.class);
-        iS.insert(p);
+        Interaction i = m.map(dto, Interaction.class);
+        iS.insert(i);
     }
 
 }

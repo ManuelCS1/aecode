@@ -1,5 +1,6 @@
 ai\aecode\aecode\controllers\PostController.class
 ai\aecode\aecode\dtos\LoginDTO.class
+ai\aecode\aecode\controllers\CommentController.class
 ai\aecode\aecode\entities\Speciality.class
 ai\aecode\aecode\services\IInteractionService.class
 ai\aecode\aecode\controllers\RoleController.class
@@ -15,6 +16,7 @@ ai\aecode\aecode\dtos\RoleDTO.class
 ai\aecode\aecode\servicesimplement\RoleServiceImplement.class
 ai\aecode\aecode\repositories\IRoleRepository.class
 ai\aecode\aecode\servicesimplement\Profile_detailServiceImplement.class
+ai\aecode\aecode\services\IArticleService.class
 ai\aecode\aecode\servicesimplement\CourseServiceImplement.class
 ai\aecode\aecode\dtos\PostDTO.class
 ai\aecode\aecode\repositories\ICourseRepository.class
@@ -22,6 +24,7 @@ ai\aecode\aecode\services\ICommentService.class
 ai\aecode\aecode\servicesimplement\ProfileServiceImplement.class
 ai\aecode\aecode\entities\Profile_detail.class
 ai\aecode\aecode\repositories\IInteractionRepository.class
+ai\aecode\aecode\servicesimplement\ArticleServiceImplement.class
 ai\aecode\aecode\servicesimplement\InteractionServiceImplement.class
 ai\aecode\aecode\servicesimplement\ScriptServiceImplement.class
 ai\aecode\aecode\repositories\ICommentRepository.class
@@ -36,6 +39,7 @@ ai\aecode\aecode\entities\Course.class
 ai\aecode\aecode\entities\Role.class
 ai\aecode\aecode\entities\Comment.class
 ai\aecode\aecode\entities\Software.class
+ai\aecode\aecode\repositories\IArticleRepository.class
 ai\aecode\aecode\dtos\CommentDTO.class
 ai\aecode\aecode\entities\Interaction.class
 ai\aecode\aecode\config\CorsConfig.class
@@ -45,12 +49,16 @@ ai\aecode\aecode\entities\Profile.class
 ai\aecode\aecode\entities\Currency.class
 ai\aecode\aecode\controllers\ScriptController.class
 ai\aecode\aecode\entities\Script.class
+ai\aecode\aecode\entities\Article.class
+ai\aecode\aecode\controllers\ArticleController.class
 ai\aecode\aecode\controllers\InteractionController.class
 ai\aecode\aecode\services\ICourseService.class
 ai\aecode\aecode\controllers\ProfileController.class
+ai\aecode\aecode\servicesimplement\CommentServiceImplement.class
 ai\aecode\aecode\dtos\ProfileDTO.class
 ai\aecode\aecode\services\IRoleService.class
 ai\aecode\aecode\entities\InteractionType.class
 ai\aecode\aecode\entities\Post.class
 ai\aecode\aecode\repositories\IProfile_detailRepository.class
+ai\aecode\aecode\dtos\ArticleDTO.class
 ai\aecode\aecode\entities\Tag.class

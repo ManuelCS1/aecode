@@ -43,6 +43,10 @@ public class ProfileServiceImplement implements IProfileService {
 
     @Override
     public Profile findByUsernameOrEmail(LoginDTO logindto) {
-        return pR.findByUsernameOrEmail(logindto.getProfile_email());
+        Profile profile = pR.findByUsernameOrEmail(logindto.getProfile_email());
+        if (profile != null && profile.getProfile_password().equals(logindto.getProfile_password())) {
+            return profile; // Devolver el perfil solo si las credenciales son válidas
+        }
+        return null;
     }
 }
