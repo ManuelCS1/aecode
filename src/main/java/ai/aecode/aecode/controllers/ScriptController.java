@@ -47,4 +47,14 @@ public class ScriptController {
         Script s = m.map(dto, Script.class);
         sS.insert(s);
     }
+    @GetMapping("/listfilter")
+    public List<ScriptDTO> list(@RequestParam(required = false) String softwareName,
+                                @RequestParam(required = false) String tagName,
+                                @RequestParam(required = false) String progLangName) {
+        List<Script> scripts = sS.list(softwareName, tagName, progLangName);
+        return scripts.stream().map(x -> {
+            ModelMapper m = new ModelMapper();
+            return m.map(x, ScriptDTO.class);
+        }).collect(Collectors.toList());
+    }
 }

@@ -1,6 +1,9 @@
 package ai.aecode.aecode.services;
 
+import ai.aecode.aecode.entities.ProgLang;
 import ai.aecode.aecode.entities.Script;
+import ai.aecode.aecode.entities.Software;
+import ai.aecode.aecode.entities.Tag;
 
 import java.util.List;
 
@@ -9,4 +12,7 @@ public interface IScriptService {
     List<Script> list();
     public void delete(int id_script);
     public Script listId(int id_script);
+    public List<Script> list(String softwareName, String tagName, String progLangName);
+
+
 }

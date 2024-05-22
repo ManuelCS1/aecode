@@ -15,9 +15,7 @@ public class Profile_detailServiceImplement implements IProfile_detailService {
     public void insert(Profile_detail profile_detail) { pdR.save(profile_detail);}
 
     @Override
-    public List<Profile_detail> list() {
-        return pdR.findAll();
-    }
+    public List<Profile_detail> list() {return pdR.findAll();}
 
     @Override
     public void delete(int id_ProfileDetail) {pdR.deleteById(id_ProfileDetail);}

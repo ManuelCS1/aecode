@@ -2,8 +2,6 @@ package ai.aecode.aecode.entities;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDateTime;
-
 @Entity
 @Table(name="script")
 public class Script {

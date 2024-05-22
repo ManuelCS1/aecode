@@ -1,4 +1,5 @@
 package ai.aecode.aecode.entities;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -17,6 +18,7 @@ public class Profile {
     @Column(name = "profile_Gender", length = 10, nullable = false)
     private String profile_Gender;
     @Column(name = "profile_Birthdate", nullable = false)
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate profile_Birthdate;
     @Column(name = "profile_email", length = 50, nullable = false)
     private String profile_email;

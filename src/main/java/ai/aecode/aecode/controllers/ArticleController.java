@@ -21,10 +21,12 @@ public class ArticleController {
     @Autowired
     private IArticleService aS;
 
+    @Autowired
+    private ObjectMapper objectMapper;
+
     @PostMapping
     public void insert(@RequestParam("file") MultipartFile file, @RequestParam("articleDTO") String articleDTOJson) {
 
-        ObjectMapper objectMapper = new ObjectMapper();
         try {
             ArticleDTO dto = objectMapper.readValue(articleDTOJson, ArticleDTO.class);
             byte[] fileContent = file.getBytes();
