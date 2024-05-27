@@ -4,6 +4,8 @@ import ai.aecode.aecode.entities.Prueba;
 import ai.aecode.aecode.services.IPruebaService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -20,8 +22,8 @@ public class PruebaController {
     @Autowired
     private IPruebaService ps;
 
-    @PostMapping
-    public void insert(@RequestBody PruebaDTO dto, @RequestParam("file") MultipartFile imagen) {
+    @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public void insert(@RequestPart("file") MultipartFile imagen) {
         if (!imagen.isEmpty()) {
             Path directorioimagenes= Paths.get("src\\main\\resources\\static\\images\\");
             String rutaAbsoluta=directorioimagenes.toFile().getAbsolutePath();
@@ -29,23 +31,27 @@ public class PruebaController {
                 byte[] bytesImg= imagen.getBytes();
                 Path rutaCompleta= Paths.get(rutaAbsoluta +"//"+ imagen.getOriginalFilename());
                 Files.write(rutaCompleta,bytesImg);
+
+                PruebaDTO dto=new PruebaDTO();
                 dto.setPrueba_multimedia(imagen.getOriginalFilename());
+
+                ModelMapper m=new ModelMapper();
+                Prueba p= m.map(dto,Prueba.class);
+                ps.insert(p);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
 
         }
-        ModelMapper m=new ModelMapper();
-        Prueba p= m.map(dto,Prueba.class);
-        ps.insert(p);
+
     }
 
-    @GetMapping
-    public List<PruebaDTO> list() {
-        return ps.list().stream().map(x -> {
-            ModelMapper m = new ModelMapper();
-            return m.map(x, PruebaDTO.class);
-        }).collect(Collectors.toList());
+    @GetMapping("/imagenes")
+    public ResponseEntity<List<String>> obtenerImagenes() {
+        List<String> imagenes = ps.list().stream()
+                .map(x -> "src/main/resources/static/images/" + x.getPrueba_multimedia())
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(imagenes);
     }
 
     @DeleteMapping("/{id}")
