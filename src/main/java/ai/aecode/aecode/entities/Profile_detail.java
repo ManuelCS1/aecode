@@ -20,7 +20,7 @@ public class Profile_detail {
     @Column(name="detail_Phone", length=15)
     private String detail_Phone;
     @Column(name="detail_ProfilePicture", length=244)
-    private byte[] detail_ProfilePicture;
+    private String detail_ProfilePicture;
     @Column(name="detail_Biography", length=244)
     private String detail_Biography;
 
@@ -33,7 +33,7 @@ public class Profile_detail {
     public Profile_detail() {
     }
 
-    public Profile_detail(int id_ProfileDetail, Profile profile, String detail_Country, String detail_City, String detail_Phone, byte[] detail_ProfilePicture, String detail_Biography, Set<Speciality> specialities) {
+    public Profile_detail(int id_ProfileDetail, Profile profile, String detail_Country, String detail_City, String detail_Phone, String detail_ProfilePicture, String detail_Biography, Set<Speciality> specialities) {
         this.id_ProfileDetail = id_ProfileDetail;
         this.profile = profile;
         this.detail_Country = detail_Country;
@@ -84,11 +84,11 @@ public class Profile_detail {
         this.detail_Phone = detail_Phone;
     }
 
-    public byte[] getDetail_ProfilePicture() {
+    public String getDetail_ProfilePicture() {
         return detail_ProfilePicture;
     }
 
-    public void setDetail_ProfilePicture(byte[] detail_ProfilePicture) {
+    public void setDetail_ProfilePicture(String detail_ProfilePicture) {
         this.detail_ProfilePicture = detail_ProfilePicture;
     }
 

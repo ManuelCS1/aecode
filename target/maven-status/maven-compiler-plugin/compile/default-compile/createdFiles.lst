@@ -16,6 +16,7 @@ ai\aecode\aecode\dtos\RoleDTO.class
 ai\aecode\aecode\servicesimplement\RoleServiceImplement.class
 ai\aecode\aecode\repositories\IRoleRepository.class
 ai\aecode\aecode\servicesimplement\Profile_detailServiceImplement.class
+ai\aecode\aecode\repositories\IPruebaRepository.class
 ai\aecode\aecode\services\IArticleService.class
 ai\aecode\aecode\servicesimplement\CourseServiceImplement.class
 ai\aecode\aecode\dtos\PostDTO.class
@@ -32,6 +33,7 @@ ai\aecode\aecode\dtos\InteractionDTO.class
 ai\aecode\aecode\dtos\Profile_detailDTO.class
 ai\aecode\aecode\entities\ProgLang.class
 ai\aecode\aecode\services\IScriptService.class
+ai\aecode\aecode\entities\Prueba.class
 ai\aecode\aecode\services\IPostService.class
 ai\aecode\aecode\dtos\ScriptDTO.class
 ai\aecode\aecode\AecodeApplication.class
@@ -48,14 +50,18 @@ ai\aecode\aecode\entities\Plan.class
 ai\aecode\aecode\entities\Profile.class
 ai\aecode\aecode\entities\Currency.class
 ai\aecode\aecode\controllers\ScriptController.class
+ai\aecode\aecode\services\IPruebaService.class
 ai\aecode\aecode\entities\Script.class
 ai\aecode\aecode\entities\Article.class
 ai\aecode\aecode\controllers\ArticleController.class
 ai\aecode\aecode\controllers\InteractionController.class
+ai\aecode\aecode\controllers\PruebaController.class
+ai\aecode\aecode\dtos\PruebaDTO.class
 ai\aecode\aecode\services\ICourseService.class
 ai\aecode\aecode\controllers\ProfileController.class
 ai\aecode\aecode\servicesimplement\CommentServiceImplement.class
 ai\aecode\aecode\dtos\ProfileDTO.class
+ai\aecode\aecode\servicesimplement\PruebaServiceImplement.class
 ai\aecode\aecode\services\IRoleService.class
 ai\aecode\aecode\entities\InteractionType.class
 ai\aecode\aecode\entities\Post.class

@@ -1,6 +1,5 @@
 package ai.aecode.aecode.dtos;
 
-import jakarta.persistence.Column;
 
 public class RoleDTO {
     private int id_role;

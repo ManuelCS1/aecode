@@ -12,7 +12,7 @@ public class Profile_detailDTO {
     private String detail_Country;
     private String detail_City;
     private String detail_Phone;
-    private byte[] detail_ProfilePicture;
+    private String detail_ProfilePicture;
     private String detail_Biography;
     private Set<Speciality> specialities;
 
@@ -57,11 +57,11 @@ public class Profile_detailDTO {
         this.detail_Phone = detail_Phone;
     }
 
-    public byte[] getDetail_ProfilePicture() {
+    public String getDetail_ProfilePicture() {
         return detail_ProfilePicture;
     }
 
-    public void setDetail_ProfilePicture(byte[] detail_ProfilePicture) {
+    public void setDetail_ProfilePicture(String detail_ProfilePicture) {
         this.detail_ProfilePicture = detail_ProfilePicture;
     }
 
