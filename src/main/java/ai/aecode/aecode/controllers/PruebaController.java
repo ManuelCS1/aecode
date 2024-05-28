@@ -31,10 +31,9 @@ public class PruebaController {
     public void insert(@RequestPart("file") MultipartFile imagen) {
         if (!imagen.isEmpty()) {
             try {
-                Path directorioImagenes = Paths.get(uploadDir);
-                // Crear el directorio si no existe
-                if (!Files.exists(directorioImagenes)) {
-                    Files.createDirectories(directorioImagenes);
+                Path uploadPath = Paths.get(uploadDir);
+                if (!Files.exists(uploadPath)) {
+                    Files.createDirectories(uploadPath);
                 }
 
 
@@ -44,9 +43,9 @@ public class PruebaController {
                     originalFilename = "default_" + System.currentTimeMillis() + ".png"; // Cambia la extensión según tu caso
                 }
 
-                byte[] bytesImg= imagen.getBytes();
-                Path rutaCompleta = directorioImagenes.resolve(imagen.getOriginalFilename());
-                Files.write(rutaCompleta, bytesImg);
+                byte[] bytes = imagen.getBytes();
+                Path path = uploadPath.resolve(imagen.getOriginalFilename());
+                Files.write(path, bytes);
 
                 PruebaDTO dto=new PruebaDTO();
                 dto.setPrueba_multimedia(imagen.getOriginalFilename());
