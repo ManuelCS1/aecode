@@ -68,7 +68,7 @@ public class PruebaController {
     @GetMapping("/imagenes")
     public ResponseEntity<List<String>> obtenerImagenes() {
         List<String> imagenes = ps.list().stream()
-                .map(x -> "/uploads/" + x.getPrueba_multimedia())
+                .map(x -> "/prueba/uploads/" + x.getPrueba_multimedia())
                 .collect(Collectors.toList());
         return ResponseEntity.ok(imagenes);
     }
