@@ -2,6 +2,7 @@ package ai.aecode.aecode.controllers;
 import ai.aecode.aecode.dtos.PruebaDTO;
 import ai.aecode.aecode.entities.Prueba;
 import ai.aecode.aecode.services.IPruebaService;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -28,7 +29,7 @@ public class PruebaController {
     private IPruebaService ps;
 
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public void insert(@RequestPart("file") MultipartFile imagen) {
+    public void insert(@RequestPart("file") MultipartFile imagen,@RequestPart("data") String dtoJson) {
         if (!imagen.isEmpty()) {
             try {
                 Path uploadPath = Paths.get(uploadDir);
@@ -47,12 +48,18 @@ public class PruebaController {
                 Path path = uploadPath.resolve(imagen.getOriginalFilename());
                 Files.write(path, bytes);
 
-                PruebaDTO dto=new PruebaDTO();
-                dto.setPrueba_multimedia(imagen.getOriginalFilename());
+                // Convertir JSON a DTO
+                ObjectMapper objectMapper = new ObjectMapper();
+                PruebaDTO dto = objectMapper.readValue(dtoJson, PruebaDTO.class);
 
-                ModelMapper m=new ModelMapper();
-                Prueba p= m.map(dto,Prueba.class);
-                ps.insert(p);
+                // Convertir DTO a entidad
+                ModelMapper modelMapper = new ModelMapper();
+                Prueba prueba = modelMapper.map(dto, Prueba.class);
+
+                // Establecer la ruta del archivo en la entidad
+                prueba.setPrueba_multimedia(originalFilename);
+
+                ps.insert(prueba);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -60,11 +67,17 @@ public class PruebaController {
     }
 
     @GetMapping("/imagenes")
-    public ResponseEntity<List<String>> obtenerImagenes() {
-        List<String> imagenes = ps.list().stream()
-                .map(x -> "/prueba/uploads/" + x.getPrueba_multimedia())
+    public ResponseEntity<List<PruebaDTO>> obtenerDatos(){
+        List<PruebaDTO> datos = ps.list().stream()
+                .map(prueba -> {
+                    PruebaDTO dto = new PruebaDTO();
+                    dto.setNombre(prueba.getNombre());
+                    dto.setDescripcion(prueba.getDescripcion());
+                    dto.setPrueba_multimedia("/prueba/uploads/" + prueba.getPrueba_multimedia());
+                    return dto;
+                })
                 .collect(Collectors.toList());
-        return ResponseEntity.ok(imagenes);
+        return ResponseEntity.ok(datos);
     }
 
     @DeleteMapping("/{id}")
