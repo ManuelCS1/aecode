@@ -3,6 +3,8 @@ import ai.aecode.aecode.dtos.PruebaDTO;
 import ai.aecode.aecode.entities.Prueba;
 import ai.aecode.aecode.services.IPruebaService;
 import org.modelmapper.ModelMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
@@ -20,6 +22,8 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/prueba")
 public class PruebaController {
+
+    private static final Logger logger = LoggerFactory.getLogger(PruebaController.class);
 
     @Value("${file.upload-dir}")
     private String uploadDir;
@@ -64,7 +68,7 @@ public class PruebaController {
     @GetMapping("/imagenes")
     public ResponseEntity<List<String>> obtenerImagenes() {
         List<String> imagenes = ps.list().stream()
-                .map(x -> Paths.get(uploadDir).resolve(x.getPrueba_multimedia()).toString())
+                .map(x -> "/uploads/" + x.getPrueba_multimedia())
                 .collect(Collectors.toList());
         return ResponseEntity.ok(imagenes);
     }
