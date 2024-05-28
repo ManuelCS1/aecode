@@ -22,7 +22,7 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         // Configurar el ResourceHandler para servir archivos estáticos
-        registry.addResourceHandler("/uploads/**")
+        registry.addResourceHandler("/prueba/uploads/**")
                 .addResourceLocations("file:" + uploadDir + "/");
     }
 

@@ -56,10 +56,9 @@ public class PruebaController {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-
         }
-
     }
+
     @GetMapping("/imagenes")
     public ResponseEntity<List<String>> obtenerImagenes() {
         List<String> imagenes = ps.list().stream()
