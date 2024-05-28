@@ -4,6 +4,7 @@ import ai.aecode.aecode.entities.Prueba;
 import ai.aecode.aecode.services.IPruebaService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,18 +20,32 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/prueba")
 public class PruebaController {
+
+    @Value("${file.upload-dir}")
+    private String uploadDir;
+
     @Autowired
     private IPruebaService ps;
 
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public void insert(@RequestPart("file") MultipartFile imagen) {
         if (!imagen.isEmpty()) {
-            Path directorioimagenes= Paths.get("src\\main\\resources\\static\\images\\");
-            String rutaAbsoluta=directorioimagenes.toFile().getAbsolutePath();
+            Path directorioImagenes = Paths.get(uploadDir);
             try {
+                // Crear el directorio si no existe
+                if (!Files.exists(directorioImagenes)) {
+                    Files.createDirectories(directorioImagenes);
+                }
+
+                // Verificar si el nombre del archivo es nulo y proporcionar un nombre por defecto
+                String originalFilename = imagen.getOriginalFilename();
+                if (originalFilename == null || originalFilename.isEmpty()) {
+                    originalFilename = "default_" + System.currentTimeMillis() + ".png"; // Cambia la extensión según tu caso
+                }
+
                 byte[] bytesImg= imagen.getBytes();
-                Path rutaCompleta= Paths.get(rutaAbsoluta +"//"+ imagen.getOriginalFilename());
-                Files.write(rutaCompleta,bytesImg);
+                Path rutaCompleta = directorioImagenes.resolve(imagen.getOriginalFilename());
+                Files.write(rutaCompleta, bytesImg);
 
                 PruebaDTO dto=new PruebaDTO();
                 dto.setPrueba_multimedia(imagen.getOriginalFilename());
@@ -49,7 +64,7 @@ public class PruebaController {
     @GetMapping("/imagenes")
     public ResponseEntity<List<String>> obtenerImagenes() {
         List<String> imagenes = ps.list().stream()
-                .map(x -> "src/main/resources/static/images/" + x.getPrueba_multimedia())
+                .map(x -> Paths.get(uploadDir).resolve(x.getPrueba_multimedia()).toString())
                 .collect(Collectors.toList());
         return ResponseEntity.ok(imagenes);
     }
