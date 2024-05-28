@@ -30,12 +30,23 @@ public class PruebaController {
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public void insert(@RequestPart("file") MultipartFile imagen) {
         if (!imagen.isEmpty()) {
-            Path directorioimagenes= Paths.get("src\\main\\resources\\static\\images\\");
-            String rutaAbsoluta=directorioimagenes.toFile().getAbsolutePath();
             try {
+                Path directorioImagenes = Paths.get(uploadDir);
+                // Crear el directorio si no existe
+                if (!Files.exists(directorioImagenes)) {
+                    Files.createDirectories(directorioImagenes);
+                }
+
+
+                // Verificar si el nombre del archivo es nulo y proporcionar un nombre por defecto
+                String originalFilename = imagen.getOriginalFilename();
+                if (originalFilename == null || originalFilename.isEmpty()) {
+                    originalFilename = "default_" + System.currentTimeMillis() + ".png"; // Cambia la extensión según tu caso
+                }
+
                 byte[] bytesImg= imagen.getBytes();
-                Path rutaCompleta= Paths.get(rutaAbsoluta +"//"+ imagen.getOriginalFilename());
-                Files.write(rutaCompleta,bytesImg);
+                Path rutaCompleta = directorioImagenes.resolve(imagen.getOriginalFilename());
+                Files.write(rutaCompleta, bytesImg);
 
                 PruebaDTO dto=new PruebaDTO();
                 dto.setPrueba_multimedia(imagen.getOriginalFilename());
@@ -53,7 +64,7 @@ public class PruebaController {
     @GetMapping("/imagenes")
     public ResponseEntity<List<String>> obtenerImagenes() {
         List<String> imagenes = ps.list().stream()
-                .map(x -> "src/main/resources/static/images/" + x.getPrueba_multimedia())
+                .map(x -> "/prueba/uploads/" + x.getPrueba_multimedia())
                 .collect(Collectors.toList());
         return ResponseEntity.ok(imagenes);
     }
