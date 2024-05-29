@@ -3,9 +3,18 @@ package ai.aecode.aecode.dtos;
 import jakarta.persistence.Column;
 
 public class PruebaDTO {
+    private int id_prueba;
     private String nombre;
     private String descripcion;
     private String prueba_multimedia;
+
+    public int getId_prueba() {
+        return id_prueba;
+    }
+
+    public void setId_prueba(int id_prueba) {
+        this.id_prueba = id_prueba;
+    }
 
     public String getNombre() {
         return nombre;
