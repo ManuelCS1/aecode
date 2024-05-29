@@ -69,6 +69,7 @@ public class PruebaController {
         List<PruebaDTO> datos = ps.list().stream()
                 .map(prueba -> {
                     PruebaDTO dto = new PruebaDTO();
+                    dto.setId_prueba(prueba.getId_prueba());
                     dto.setNombre(prueba.getNombre());
                     dto.setDescripcion(prueba.getDescripcion());
                     dto.setPrueba_multimedia("/prueba/uploads/" + prueba.getPrueba_multimedia());
