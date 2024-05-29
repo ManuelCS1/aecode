@@ -1,6 +1,5 @@
 package ai.aecode.aecode.dtos;
 
-import jakarta.persistence.Column;
 
 public class PruebaDTO {
     private int id_prueba;
