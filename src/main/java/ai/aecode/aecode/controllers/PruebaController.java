@@ -2,10 +2,12 @@ package ai.aecode.aecode.controllers;
 import ai.aecode.aecode.dtos.PruebaDTO;
 import ai.aecode.aecode.entities.Prueba;
 import ai.aecode.aecode.services.IPruebaService;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -29,7 +31,7 @@ public class PruebaController {
     private IPruebaService ps;
 
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public void insert(@RequestPart("file") MultipartFile imagen,@RequestPart("data") String dtoJson) {
+    public ResponseEntity<String> insert(@RequestPart("file") MultipartFile imagen,@RequestPart("data") String dtoJson) {
         if (!imagen.isEmpty()) {
             try {
                 Path uploadPath = Paths.get(uploadDir);
@@ -59,9 +61,14 @@ public class PruebaController {
 
                 ps.insert(prueba);
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al guardar el archivo de imagen: " + e.getMessage());
+            } catch (Exception e) {
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al insertar el objeto en la base de datos: " + e.getMessage());
             }
+        } else {
+            return ResponseEntity.badRequest().body("No se proporcionó un archivo válido");
         }
+        return null;
     }
 
     @GetMapping("/imagenes")
