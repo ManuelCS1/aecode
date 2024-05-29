@@ -31,7 +31,7 @@ public class PruebaController {
     private IPruebaService ps;
 
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public ResponseEntity<String> insert(@RequestPart(value="file", required = false) MultipartFile imagen,@RequestPart(value = "data", required = false) String dtoJson) {
+    public ResponseEntity<String> insert(@RequestPart(value="file", required = true ) MultipartFile imagen,@RequestPart(value = "data", required = false) String dtoJson) {
         try {
             if (imagen != null && !imagen.isEmpty()) {
                 Path uploadPath = Paths.get(uploadDir);
