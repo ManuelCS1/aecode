@@ -36,8 +36,6 @@ public class PruebaController {
                 if (!Files.exists(uploadPath)) {
                     Files.createDirectories(uploadPath);
                 }
-
-
                 // Verificar si el nombre del archivo es nulo y proporcionar un nombre por defecto
                 String originalFilename = imagen.getOriginalFilename();
                 if (originalFilename == null || originalFilename.isEmpty()) {
