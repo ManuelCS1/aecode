@@ -31,9 +31,9 @@ public class PruebaController {
     private IPruebaService ps;
 
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public ResponseEntity<String> insert(@RequestPart(value="file", required = true ) MultipartFile imagen,@RequestPart(value = "data", required = false) String dtoJson) {
-        try {
-            if (imagen != null && !imagen.isEmpty()) {
+    public ResponseEntity<String> insert(@RequestPart(value="file", required = true) MultipartFile imagen,@RequestPart(value = "data", required = false) String dtoJson) {
+        if (!imagen.isEmpty()) {
+            try {
                 Path uploadPath = Paths.get(uploadDir);
                 if (!Files.exists(uploadPath)) {
                     Files.createDirectories(uploadPath);
@@ -60,23 +60,13 @@ public class PruebaController {
                 prueba.setPrueba_multimedia(originalFilename);
 
                 ps.insert(prueba);
-            } else if (dtoJson != null && !dtoJson.isEmpty()) {
-                // Convertir JSON a DTO
-                ObjectMapper objectMapper = new ObjectMapper();
-                PruebaDTO dto = objectMapper.readValue(dtoJson, PruebaDTO.class);
-
-                // Convertir DTO a entidad
-                ModelMapper modelMapper = new ModelMapper();
-                Prueba prueba = modelMapper.map(dto, Prueba.class);
-
-                ps.insert(prueba);
-            } else {
-                return ResponseEntity.badRequest().body("No se proporcionaron datos ni un archivo válido");
+            } catch (IOException e) {
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al guardar el archivo de imagen: " + e.getMessage());
+            } catch (Exception e) {
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al insertar el objeto en la base de datos: " + e.getMessage());
             }
-        } catch (IOException e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al guardar el archivo de imagen: " + e.getMessage());
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al insertar el objeto en la base de datos: " + e.getMessage());
+        } else {
+            return ResponseEntity.badRequest().body("No se proporcionó un archivo válido");
         }
         return null;
     }
