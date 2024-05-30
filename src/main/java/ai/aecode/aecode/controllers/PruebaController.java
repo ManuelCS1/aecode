@@ -31,7 +31,7 @@ public class PruebaController {
     private IPruebaService ps;
 
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public ResponseEntity<String> insert(@RequestPart(value="file", required = false) MultipartFile imagen,@RequestBody(required = false) PruebaDTO dto) {
+    public ResponseEntity<String> insert(@RequestPart(value="file", required = false) MultipartFile imagen,@RequestPart(value = "data", required = false) String dtoJson) {
         if (!imagen.isEmpty()) {
             try {
                 Path uploadPath = Paths.get(uploadDir);
@@ -46,14 +46,15 @@ public class PruebaController {
                 byte[] bytes = imagen.getBytes();
                 Path path = uploadPath.resolve(imagen.getOriginalFilename());
                 Files.write(path, bytes);
-
+                // Convertir JSON a DTO
+                ObjectMapper objectMapper = new ObjectMapper();
+                PruebaDTO dto = objectMapper.readValue(dtoJson, PruebaDTO.class);
                 // Convertir DTO a entidad
                 ModelMapper modelMapper = new ModelMapper();
                 Prueba prueba = modelMapper.map(dto, Prueba.class);
                 // Establecer la ruta del archivo en la entidad
                 prueba.setPrueba_multimedia(originalFilename);
                 ps.insert(prueba);
-
             } catch (IOException e) {
                 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al guardar el archivo de imagen: " + e.getMessage());
             } catch (Exception e) {
