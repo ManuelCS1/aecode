@@ -30,8 +30,8 @@ public class PruebaController {
     @Autowired
     private IPruebaService ps;
 
-    @PostMapping(value="/picture", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public ResponseEntity<String> insert(@RequestPart(value="file", required = false) MultipartFile imagen) {
+    @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<String> insert(@RequestPart(value="file", required = false) MultipartFile imagen,@RequestBody(required = false) PruebaDTO dto) {
         if (!imagen.isEmpty()) {
             try {
                 Path uploadPath = Paths.get(uploadDir);
@@ -43,36 +43,26 @@ public class PruebaController {
                 if (originalFilename == null || originalFilename.isEmpty()) {
                     originalFilename = "default_" + System.currentTimeMillis() + ".png"; // Cambia la extensión según tu caso
                 }
-
                 byte[] bytes = imagen.getBytes();
                 Path path = uploadPath.resolve(imagen.getOriginalFilename());
                 Files.write(path, bytes);
 
-                PruebaDTO dto=new PruebaDTO();
-                dto.setPrueba_multimedia(imagen.getOriginalFilename());
-                ModelMapper m=new ModelMapper();
-                Prueba p= m.map(dto,Prueba.class);
-                ps.insert(p);
+                // Convertir DTO a entidad
+                ModelMapper modelMapper = new ModelMapper();
+                Prueba prueba = modelMapper.map(dto, Prueba.class);
+                // Establecer la ruta del archivo en la entidad
+                prueba.setPrueba_multimedia(originalFilename);
+                ps.insert(prueba);
+
             } catch (IOException e) {
                 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al guardar el archivo de imagen: " + e.getMessage());
+            } catch (Exception e) {
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al insertar el objeto en la base de datos: " + e.getMessage());
             }
+        } else {
+            return ResponseEntity.badRequest().body("No se proporcionó un archivo válido");
         }
         return null;
-    }
-    @PostMapping("/dto")
-    public ResponseEntity<String> insertProfile(@RequestBody PruebaDTO dto) {
-        try {
-            // Convertir DTO a entidad
-            ModelMapper modelMapper = new ModelMapper();
-            Prueba prueba = modelMapper.map(dto, Prueba.class);
-
-            // Insertar el objeto en la base de datos
-            ps.insert(prueba);
-
-            return ResponseEntity.ok("¨Prueba guardado correctamente");
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al insertar el objeto en la base de datos: " + e.getMessage());
-        }
     }
 
 
