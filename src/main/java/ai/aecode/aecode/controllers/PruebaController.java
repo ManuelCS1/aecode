@@ -91,14 +91,46 @@ public class PruebaController {
         PruebaDTO dto=m.map(ps.listId(id),PruebaDTO.class);
         return dto;
     }
-    @PutMapping
-    public void update(@RequestBody PruebaDTO dto) {
-        ModelMapper m = new ModelMapper();
-        Prueba p = m.map(dto, Prueba.class);
-        ps.insert(p);
+    @PutMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<String> update(@RequestPart(value="file", required = false) MultipartFile imagen,@RequestPart(value = "data", required = false) String dtoJson) throws JsonProcessingException {
+        if (!imagen.isEmpty()) {
+            try {
+                Path uploadPath = Paths.get(uploadDir);
+                if (!Files.exists(uploadPath)) {
+                    Files.createDirectories(uploadPath);
+                }
+                // Verificar si el nombre del archivo es nulo y proporcionar un nombre por defecto
+                String originalFilename = imagen.getOriginalFilename();
+                if (originalFilename == null || originalFilename.isEmpty()) {
+                    originalFilename = "default_" + System.currentTimeMillis() + ".png"; // Cambia la extensión según tu caso
+                }
+                byte[] bytes = imagen.getBytes();
+                Path path = uploadPath.resolve(imagen.getOriginalFilename());
+                Files.write(path, bytes);
+                // Convertir JSON a DTO
+                ObjectMapper objectMapper = new ObjectMapper();
+                PruebaDTO dto = objectMapper.readValue(dtoJson, PruebaDTO.class);
+                // Convertir DTO a entidad
+                ModelMapper modelMapper = new ModelMapper();
+                Prueba prueba = modelMapper.map(dto, Prueba.class);
+                // Establecer la ruta del archivo en la entidad
+                prueba.setPrueba_multimedia(originalFilename);
+                ps.insert(prueba);
+            } catch (IOException e) {
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al guardar el archivo de imagen: " + e.getMessage());
+            } catch (Exception e) {
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al insertar el objeto en la base de datos: " + e.getMessage());
+            }
+        } else {
+            /// Convertir JSON a DTO
+            ObjectMapper objectMapper = new ObjectMapper();
+            PruebaDTO dto = objectMapper.readValue(dtoJson, PruebaDTO.class);
+            // Convertir DTO a entidad
+            ModelMapper modelMapper = new ModelMapper();
+            Prueba prueba = modelMapper.map(dto, Prueba.class);
+            ps.insert(prueba);
+            return ResponseEntity.ok("Actualización exitosa");
+        }
+        return ResponseEntity.ok("Actualización exitosa");
     }
-
-
-
-
 }
