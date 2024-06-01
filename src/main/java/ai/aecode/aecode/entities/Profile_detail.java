@@ -23,7 +23,6 @@ public class Profile_detail {
     private String detail_ProfilePicture;
     @Column(name="detail_Biography", length=244)
     private String detail_Biography;
-
     @ManyToMany
     @JoinTable(name = "detail_specialties",
             joinColumns = @JoinColumn(name = "id_ProfileDetail"),

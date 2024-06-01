@@ -1,9 +1,6 @@
 package ai.aecode.aecode.dtos;
 
 import ai.aecode.aecode.entities.*;
-import jakarta.persistence.*;
-
-import java.time.LocalDateTime;
 
 public class ScriptDTO {
     private int id_script;

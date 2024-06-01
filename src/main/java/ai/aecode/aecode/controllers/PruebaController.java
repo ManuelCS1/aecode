@@ -46,6 +46,7 @@ public class PruebaController {
                 byte[] bytes = imagen.getBytes();
                 Path path = uploadPath.resolve(imagen.getOriginalFilename());
                 Files.write(path, bytes);
+
                 // Convertir JSON a DTO
                 ObjectMapper objectMapper = new ObjectMapper();
                 PruebaDTO dto = objectMapper.readValue(dtoJson, PruebaDTO.class);

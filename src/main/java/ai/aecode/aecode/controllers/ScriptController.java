@@ -1,12 +1,25 @@
 package ai.aecode.aecode.controllers;
-
 import ai.aecode.aecode.dtos.ScriptDTO;
 import ai.aecode.aecode.entities.Script;
 import ai.aecode.aecode.services.IScriptService;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -14,14 +27,62 @@ import java.util.stream.Collectors;
 @RequestMapping("/script")
 public class ScriptController {
 
+    @Value("${file.upload-dir}")
+    private String uploadDir;
+
     @Autowired
     private IScriptService sS;
 
-    @PostMapping
-    public void insert(@RequestBody ScriptDTO dto){
-        ModelMapper m=new ModelMapper();
-        Script s= m.map(dto,Script.class);
-        sS.insert(s);
+    @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<String> insert(@RequestPart(value="Smultimedia", required = false) MultipartFile multimedia,
+                                         @RequestPart(value="Sscript", required = false) MultipartFile scriptfile,
+                                         @RequestPart(value = "Sdata", required = false) String dtoJson) {
+        String multimediaFilename = null;
+        String scriptFilename = null;
+            try {
+                // Manejo del archivo multimedia
+                if (multimedia != null && !multimedia.isEmpty()) {
+                    Path uploadPath = Paths.get(uploadDir);
+                    if (!Files.exists(uploadPath)) {
+                        Files.createDirectories(uploadPath);
+                    }
+                     multimediaFilename = multimedia.getOriginalFilename();
+                    byte[] bytes = multimedia.getBytes();
+                    Path path = uploadPath.resolve(multimedia.getOriginalFilename());
+                    Files.write(path, bytes);
+                }
+                // Manejo del archivo de script
+                if (scriptfile != null && !scriptfile.isEmpty()) {
+                    Path uploadPath = Paths.get(uploadDir);
+                    if (!Files.exists(uploadPath)) {
+                        Files.createDirectories(uploadPath);
+                    }
+                    scriptFilename = multimedia.getOriginalFilename();;
+
+                    byte[] bytes = scriptfile.getBytes();
+                    Path path = uploadPath.resolve(scriptfile.getOriginalFilename());
+                    Files.write(path, bytes);
+                }
+                // Convertir JSON a DTO
+                ObjectMapper objectMapper = new ObjectMapper();
+                objectMapper.registerModule(new JavaTimeModule());
+                ScriptDTO dto = objectMapper.readValue(dtoJson, ScriptDTO.class);
+
+                // Convertir DTO a entidad
+                ModelMapper modelMapper = new ModelMapper();
+                Script script = modelMapper.map(dto, Script.class);
+
+                // Establecer la ruta del archivo en la entidad
+                script.setScript_multimedia(multimediaFilename);
+                script.setScript_file(scriptFilename);
+
+                sS.insert(script);
+                return ResponseEntity.ok("Script guardado correctamente");
+            } catch (IOException e) {
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al guardar los archivos: " + e.getMessage());
+            } catch (Exception e) {
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al insertar el objeto en la base de datos: " + e.getMessage());
+            }
     }
 
     @GetMapping

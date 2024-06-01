@@ -1,5 +1,7 @@
 package ai.aecode.aecode.dtos;
 import ai.aecode.aecode.entities.Role;
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.time.LocalDate;
 
 public class ProfileDTO {
@@ -7,6 +9,7 @@ public class ProfileDTO {
     private Role role;
     private String profile_Fullname;
     private String profile_Gender;
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate profile_Birthdate;
     private String profile_email;
     private String profile_password;
