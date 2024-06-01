@@ -2,7 +2,6 @@ package ai.aecode.aecode.controllers;
 import ai.aecode.aecode.dtos.ScriptDTO;
 import ai.aecode.aecode.entities.Script;
 import ai.aecode.aecode.services.IScriptService;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.modelmapper.ModelMapper;
@@ -13,13 +12,10 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -57,7 +53,7 @@ public class ScriptController {
                     if (!Files.exists(uploadPath)) {
                         Files.createDirectories(uploadPath);
                     }
-                    scriptFilename = multimedia.getOriginalFilename();;
+                    scriptFilename = scriptfile.getOriginalFilename();;
 
                     byte[] bytes = scriptfile.getBytes();
                     Path path = uploadPath.resolve(scriptfile.getOriginalFilename());
@@ -86,11 +82,26 @@ public class ScriptController {
     }
 
     @GetMapping
-    public List<ScriptDTO> list() {
-        return sS.list().stream().map(x -> {
-            ModelMapper m = new ModelMapper();
-            return m.map(x, ScriptDTO.class);
-        }).collect(Collectors.toList());
+    public ResponseEntity<List<ScriptDTO>> list(){
+        List<ScriptDTO> datos = sS.list().stream()
+                .map(prueba -> {
+                    ScriptDTO dto = new ScriptDTO();
+                    dto.setId_script(prueba.getId_script());
+                    dto.setProglang(prueba.getProglang());
+                    dto.setPlan(prueba.getPlan());
+                    dto.setCurrency(prueba.getCurrency());
+                    dto.setSoftware(prueba.getSoftware());
+                    dto.setTag(prueba.getTag());
+                    dto.setProfile(prueba.getProfile());
+                    dto.setScript_name(prueba.getScript_name());
+                    dto.setScript_description(prueba.getScript_description());
+                    dto.setScript_price(prueba.getScript_price());
+                    dto.setScript_multimedia("/uploads/" + prueba.getScript_multimedia());
+                    dto.setScript_file("/uploads/" + prueba.getScript_file());
+                    return dto;
+                })
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(datos);
     }
 
     @DeleteMapping("/{id}")
