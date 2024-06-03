@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -98,6 +99,7 @@ public class ScriptController {
                     dto.setScript_price(prueba.getScript_price());
                     dto.setScript_multimedia("/uploads/" + prueba.getScript_multimedia());
                     dto.setScript_file("/uploads/" + prueba.getScript_file());
+                    dto.setScript_date(prueba.getScript_date());
                     return dto;
                 })
                 .collect(Collectors.toList());
@@ -108,15 +110,33 @@ public class ScriptController {
     public void delete(@PathVariable("id")Integer id){sS.delete(id);}
 
     @GetMapping("/{id}")
-    public ScriptDTO listId(@PathVariable("id")Integer id){
-        ModelMapper m=new ModelMapper();
-        ScriptDTO dto=m.map(sS.listId(id),ScriptDTO.class);
-        return dto;
+    public ResponseEntity<List<ScriptDTO>> listid(@PathVariable("id")Integer id){
+        List<ScriptDTO> datos = sS.list().stream()
+                .map(prueba -> {
+                    ScriptDTO dto = new ScriptDTO();
+                    dto.setId_script(prueba.getId_script());
+                    dto.setProglang(prueba.getProglang());
+                    dto.setPlan(prueba.getPlan());
+                    dto.setCurrency(prueba.getCurrency());
+                    dto.setSoftware(prueba.getSoftware());
+                    dto.setTag(prueba.getTag());
+                    dto.setProfile(prueba.getProfile());
+                    dto.setScript_name(prueba.getScript_name());
+                    dto.setScript_description(prueba.getScript_description());
+                    dto.setScript_price(prueba.getScript_price());
+                    dto.setScript_multimedia("/uploads/" + prueba.getScript_multimedia());
+                    dto.setScript_file("/uploads/" + prueba.getScript_file());
+                    dto.setScript_date(prueba.getScript_date());
+                    return dto;
+                })
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(datos);
     }
     @PutMapping
     public void update(@RequestBody ScriptDTO dto) {
         ModelMapper m = new ModelMapper();
         Script s = m.map(dto, Script.class);
+        s.setScript_date(LocalDate.now());
         sS.insert(s);
     }
     @GetMapping("/listfilter")

@@ -1,7 +1,9 @@
 package ai.aecode.aecode.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -11,21 +13,28 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_post;
     @ManyToOne
-    @JoinColumn(name = "id_ProfileDetail")
-    private Profile_detail profile_detail;
-    @Column(name="post_date", nullable = false)
-    private LocalDateTime post_date;
-    @Column(name="post_content", length=254, nullable = false)
+    @JoinColumn(name = "id_profile")
+    private Profile profile;
+    @Column(name="post_date")
+    @JsonFormat(pattern = "dd-MM-yyyy")
+    private LocalDate post_date;
+    @Column(name="post_content", length=254)
     private String post_content;
-    @Column(name="post_description", length=254, nullable = false)
+    @Lob
+    @Column(name="post_description" )
     private String post_description;
+
+    @PrePersist
+    public void prePersist() {
+        this.post_date = LocalDate.now();
+    }
 
     public Post() {
     }
 
-    public Post(int id_post, Profile_detail profile_detail, LocalDateTime post_date, String post_content, String post_description) {
+    public Post(int id_post, Profile profile, LocalDate post_date, String post_content, String post_description) {
         this.id_post = id_post;
-        this.profile_detail = profile_detail;
+        this.profile = profile;
         this.post_date = post_date;
         this.post_content = post_content;
         this.post_description = post_description;
@@ -39,19 +48,19 @@ public class Post {
         this.id_post = id_post;
     }
 
-    public Profile_detail getProfile_detail() {
-        return profile_detail;
+    public Profile getProfile() {
+        return profile;
     }
 
-    public void setProfile_detail(Profile_detail profile_detail) {
-        this.profile_detail = profile_detail;
+    public void setProfile(Profile profile) {
+        this.profile = profile;
     }
 
-    public LocalDateTime getPost_date() {
+    public LocalDate getPost_date() {
         return post_date;
     }
 
-    public void setPost_date(LocalDateTime post_date) {
+    public void setPost_date(LocalDate post_date) {
         this.post_date = post_date;
     }
 

@@ -1,12 +1,12 @@
 package ai.aecode.aecode.dtos;
 
-import ai.aecode.aecode.entities.Profile_detail;
-import java.time.LocalDateTime;
+import ai.aecode.aecode.entities.Profile;
+import java.time.LocalDate;
 
 public class PostDTO {
     private int id_post;
-    private Profile_detail profile_detail;
-    private LocalDateTime post_date;
+    private Profile profile;
+    private LocalDate post_date;
     private String post_content;
     private String post_description;
 
@@ -18,19 +18,19 @@ public class PostDTO {
         this.id_post = id_post;
     }
 
-    public Profile_detail getProfile_detail() {
-        return profile_detail;
+    public Profile getProfile() {
+        return profile;
     }
 
-    public void setProfile_detail(Profile_detail profile_detail) {
-        this.profile_detail = profile_detail;
+    public void setProfile(Profile profile) {
+        this.profile = profile;
     }
 
-    public LocalDateTime getPost_date() {
+    public LocalDate getPost_date() {
         return post_date;
     }
 
-    public void setPost_date(LocalDateTime post_date) {
+    public void setPost_date(LocalDate post_date) {
         this.post_date = post_date;
     }
 

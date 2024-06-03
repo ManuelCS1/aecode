@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/currency")
+@RequestMapping("/plan")
 public class PlanController {
     @Autowired
     private IPlanService pS;

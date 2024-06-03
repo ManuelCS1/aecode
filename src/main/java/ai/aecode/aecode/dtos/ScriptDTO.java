@@ -2,6 +2,8 @@ package ai.aecode.aecode.dtos;
 
 import ai.aecode.aecode.entities.*;
 
+import java.time.LocalDate;
+
 public class ScriptDTO {
     private int id_script;
     private ProgLang proglang;
@@ -15,6 +17,8 @@ public class ScriptDTO {
     private String script_multimedia;
     private String script_description;
     private Double script_price;
+    private LocalDate script_date;
+
 
     public int getId_script() {
         return id_script;
@@ -110,5 +114,13 @@ public class ScriptDTO {
 
     public void setScript_price(Double script_price) {
         this.script_price = script_price;
+    }
+
+    public LocalDate getScript_date() {
+        return script_date;
+    }
+
+    public void setScript_date(LocalDate script_date) {
+        this.script_date = script_date;
     }
 }

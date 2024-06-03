@@ -1,6 +1,9 @@
 package ai.aecode.aecode.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
+
+import java.time.LocalDate;
 
 @Entity
 @Table(name="script")
@@ -37,12 +40,18 @@ public class Script {
     private String script_description;
     @Column(name="script_price")
     private Double script_price;
+    @Column(name="script_date")
+    @JsonFormat(pattern = "dd-MM-yyyy")
+    private LocalDate script_date;
 
     public Script() {
     }
+    @PrePersist
+    public void prePersist() {
+        this.script_date = LocalDate.now();
+    }
 
-
-    public Script(int id_script, ProgLang proglang, Plan plan, Currency currency, Software software, Tag tag, Profile profile, String script_name, String script_file, String script_multimedia, String script_description, Double script_price) {
+    public Script(int id_script, ProgLang proglang, Plan plan, Currency currency, Software software, Tag tag, Profile profile, String script_name, String script_file, String script_multimedia, String script_description, Double script_price, LocalDate script_date) {
         this.id_script = id_script;
         this.proglang = proglang;
         this.plan = plan;
@@ -55,6 +64,7 @@ public class Script {
         this.script_multimedia = script_multimedia;
         this.script_description = script_description;
         this.script_price = script_price;
+        this.script_date = script_date;
     }
 
     public int getId_script() {
@@ -151,5 +161,13 @@ public class Script {
 
     public void setScript_price(Double script_price) {
         this.script_price = script_price;
+    }
+
+    public LocalDate getScript_date() {
+        return script_date;
+    }
+
+    public void setScript_date(LocalDate script_date) {
+        this.script_date = script_date;
     }
 }
