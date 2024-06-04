@@ -9,7 +9,7 @@ public class ProfileDTO {
     private Role role;
     private String profile_Fullname;
     private String profile_Gender;
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate profile_Birthdate;
     private String profile_email;
     private String profile_password;

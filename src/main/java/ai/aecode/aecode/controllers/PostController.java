@@ -4,7 +4,9 @@ import ai.aecode.aecode.dtos.PostDTO;
 import ai.aecode.aecode.dtos.ScriptDTO;
 import ai.aecode.aecode.entities.Post;
 import ai.aecode.aecode.services.IPostService;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +40,6 @@ public class PostController {
     public ResponseEntity<String> insert(@RequestPart(value="Pmultimedia", required = false) MultipartFile multimedia,
                                          @RequestPart(value = "¨Pdata", required = false) String dtoJson) {
         String multimediaFilename = null;
-        String scriptFilename = null;
         try {
             // Manejo del archivo multimedia
             if (multimedia != null && !multimedia.isEmpty()) {
@@ -49,6 +50,7 @@ public class PostController {
                 multimediaFilename = multimedia.getOriginalFilename();
                 byte[] bytes = multimedia.getBytes();
                 Path path = uploadPath.resolve(multimedia.getOriginalFilename());
+
                 Files.write(path, bytes);
             }
 
@@ -64,7 +66,7 @@ public class PostController {
             // Establecer la ruta del archivo en la entidad
             post.setPost_content(multimediaFilename);
             pS.insert(post);
-            return ResponseEntity.ok("Script guardado correctamente");
+            return ResponseEntity.ok("multimedia guardado correctamente");
         } catch (IOException e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al guardar el archivo: " + e.getMessage());
         } catch (Exception e) {

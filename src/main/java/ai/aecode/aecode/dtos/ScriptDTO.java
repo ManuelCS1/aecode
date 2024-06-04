@@ -1,6 +1,7 @@
 package ai.aecode.aecode.dtos;
 
 import ai.aecode.aecode.entities.*;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.time.LocalDate;
 
@@ -17,6 +18,7 @@ public class ScriptDTO {
     private String script_multimedia;
     private String script_description;
     private Double script_price;
+    @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate script_date;
 
 

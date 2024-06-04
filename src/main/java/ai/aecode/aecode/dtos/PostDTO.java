@@ -1,11 +1,14 @@
 package ai.aecode.aecode.dtos;
 
 import ai.aecode.aecode.entities.Profile;
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.time.LocalDate;
 
 public class PostDTO {
     private int id_post;
     private Profile profile;
+    @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate post_date;
     private String post_content;
     private String post_description;
