@@ -2,9 +2,7 @@ package ai.aecode.aecode.controllers;
 import ai.aecode.aecode.dtos.ScriptDTO;
 import ai.aecode.aecode.entities.Script;
 import ai.aecode.aecode.services.IScriptService;
-import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +30,7 @@ public class ScriptController {
     @Autowired
     private IScriptService sS;
 
-    @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+   /* @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<String> insert(@RequestPart(value="Smultimedia", required = false) MultipartFile multimedia,
                                          @RequestPart(value="Sscript", required = false) MultipartFile scriptfile,
                                          @RequestPart(value = "Sdata", required = false) String dtoJson) {
@@ -76,13 +74,15 @@ public class ScriptController {
                 script.setScript_file(scriptFilename);
 
                 sS.insert(script);
+
+
                 return ResponseEntity.ok("Script guardado correctamente");
             } catch (IOException e) {
                 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al guardar los archivos: " + e.getMessage());
             } catch (Exception e) {
                 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al insertar el objeto en la base de datos: " + e.getMessage());
             }
-    }
+    }*/
 
     @GetMapping
     public ResponseEntity<List<ScriptDTO>> list(){

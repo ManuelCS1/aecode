@@ -19,11 +19,11 @@ public class Software {
         this.software_name = software_name;
     }
 
-    public int getId_Software() {
+    public int getId_software() {
         return id_software;
     }
 
-    public void setId_Software(int id_software) {
+    public void setId_software(int id_software) {
         this.id_software = id_software;
     }
 
