@@ -4,18 +4,21 @@ import ai.aecode.aecode.entities.*;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 public class ScriptDTO {
     private int id_script;
-    private ProgLang proglang;
+    private Set<ProgLang> proglang;
     private Plan plan;
     private Currency currency;
-    private Software software;
-    private Tag tag;
+    private Set<Software> software;
+    private Set<Tag> tag;
     private Profile profile;
     private String script_name;
     private String script_file;
-    private String script_multimedia;
+    private List<String> script_multimedia = new ArrayList<>();
     private String script_description;
     private Double script_price;
     @JsonFormat(pattern = "dd-MM-yyyy")
@@ -30,11 +33,11 @@ public class ScriptDTO {
         this.id_script = id_script;
     }
 
-    public ProgLang getProglang() {
+    public Set<ProgLang> getProglang() {
         return proglang;
     }
 
-    public void setProglang(ProgLang proglang) {
+    public void setProglang(Set<ProgLang> proglang) {
         this.proglang = proglang;
     }
 
@@ -54,19 +57,19 @@ public class ScriptDTO {
         this.currency = currency;
     }
 
-    public Software getSoftware() {
+    public Set<Software> getSoftware() {
         return software;
     }
 
-    public void setSoftware(Software software) {
+    public void setSoftware(Set<Software> software) {
         this.software = software;
     }
 
-    public Tag getTag() {
+    public Set<Tag> getTag() {
         return tag;
     }
 
-    public void setTag(Tag tag) {
+    public void setTag(Set<Tag> tag) {
         this.tag = tag;
     }
 
@@ -94,11 +97,11 @@ public class ScriptDTO {
         this.script_file = script_file;
     }
 
-    public String getScript_multimedia() {
+    public List<String> getScript_multimedia() {
         return script_multimedia;
     }
 
-    public void setScript_multimedia(String script_multimedia) {
+    public void setScript_multimedia(List<String> script_multimedia) {
         this.script_multimedia = script_multimedia;
     }
 

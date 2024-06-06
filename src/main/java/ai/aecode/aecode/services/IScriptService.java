@@ -12,7 +12,4 @@ public interface IScriptService {
     List<Script> list();
     public void delete(int id_script);
     public Script listId(int id_script);
-    public List<Script> list(String softwareName, String tagName, String progLangName);
-
-
 }

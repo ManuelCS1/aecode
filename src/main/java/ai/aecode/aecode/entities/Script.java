@@ -4,6 +4,9 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name="script")
@@ -12,21 +15,27 @@ public class Script {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_script;
 
-    @ManyToOne
-    @JoinColumn(name = "id_proglang")
-    private ProgLang proglang;
+    @ManyToMany
+    @JoinTable(name = "detail_proglang",
+            joinColumns = @JoinColumn(name = "id_script"),
+            inverseJoinColumns = @JoinColumn(name = "id_proglang"))
+    private Set<ProgLang> proglang;
     @ManyToOne
     @JoinColumn(name = "id_plan")
     private Plan plan;
     @ManyToOne
     @JoinColumn(name = "id_currency")
     private Currency currency;
-    @ManyToOne
-    @JoinColumn(name = "id_software")
-    private Software software;
-    @ManyToOne
-    @JoinColumn(name = "id_tag")
-    private Tag tag;
+    @ManyToMany
+    @JoinTable(name = "detail_software",
+            joinColumns = @JoinColumn(name = "id_script"),
+            inverseJoinColumns = @JoinColumn(name = "id_software"))
+    private Set<Software> software;
+    @ManyToMany
+    @JoinTable(name = "detail_tag",
+            joinColumns = @JoinColumn(name = "id_script"),
+            inverseJoinColumns = @JoinColumn(name = "id_tag"))
+    private Set<Tag> tag;
     @ManyToOne
     @JoinColumn(name = "id_profile")
     private Profile profile;
@@ -34,8 +43,12 @@ public class Script {
     private String script_name;
     @Column(name="script_file", length=254)
     private String script_file;
-    @Column(name="script_multimedia", length=254)
-    private String script_multimedia;
+
+    @ElementCollection
+    @CollectionTable(name = "script_multimedias", joinColumns = @JoinColumn(name = "id_script"))
+    @Column(name = "script_multimedia", length = 254)
+    private List<String> script_multimedia = new ArrayList<>();
+
     @Column(name="script_description", length=254)
     private String script_description;
     @Column(name="script_price")
@@ -51,7 +64,7 @@ public class Script {
         this.script_date = LocalDate.now();
     }
 
-    public Script(int id_script, ProgLang proglang, Plan plan, Currency currency, Software software, Tag tag, Profile profile, String script_name, String script_file, String script_multimedia, String script_description, Double script_price, LocalDate script_date) {
+    public Script(int id_script, Set<ProgLang> proglang, Plan plan, Currency currency, Set<Software> software, Set<Tag> tag, Profile profile, String script_name, String script_file, List<String> script_multimedia, String script_description, Double script_price, LocalDate script_date) {
         this.id_script = id_script;
         this.proglang = proglang;
         this.plan = plan;
@@ -75,11 +88,11 @@ public class Script {
         this.id_script = id_script;
     }
 
-    public ProgLang getProglang() {
+    public Set<ProgLang> getProglang() {
         return proglang;
     }
 
-    public void setProglang(ProgLang proglang) {
+    public void setProglang(Set<ProgLang> proglang) {
         this.proglang = proglang;
     }
 
@@ -99,19 +112,19 @@ public class Script {
         this.currency = currency;
     }
 
-    public Software getSoftware() {
+    public Set<Software> getSoftware() {
         return software;
     }
 
-    public void setSoftware(Software software) {
+    public void setSoftware(Set<Software> software) {
         this.software = software;
     }
 
-    public Tag getTag() {
+    public Set<Tag> getTag() {
         return tag;
     }
 
-    public void setTag(Tag tag) {
+    public void setTag(Set<Tag> tag) {
         this.tag = tag;
     }
 
@@ -139,11 +152,11 @@ public class Script {
         this.script_file = script_file;
     }
 
-    public String getScript_multimedia() {
+    public List<String> getScript_multimedia() {
         return script_multimedia;
     }
 
-    public void setScript_multimedia(String script_multimedia) {
+    public void setScript_multimedia(List<String> script_multimedia) {
         this.script_multimedia = script_multimedia;
     }
 

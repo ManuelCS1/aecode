@@ -33,27 +33,5 @@ public class ScriptServiceImplement implements IScriptService {
         return sR.findById(id_script).orElse(new Script());
     }
 
-    @Override
-    public List<Script> list(String softwareName, String tagName, String progLangName) {
-        List<Script> result = new ArrayList<>();
-
-        if (softwareName != null) {
-            result.addAll(sR.findBySoftwareName(softwareName));
-        }
-
-        if (tagName != null) {
-            result.addAll(sR.findByTagName(tagName));
-        }
-
-        if (progLangName != null) {
-            result.addAll(sR.findByProgLangName(progLangName));
-        }
-
-        if (softwareName != null && tagName != null && progLangName != null) {
-            result.addAll(sR.findBySoftwareNameAndTagNameAndProgLangName(softwareName, tagName, progLangName));
-        }
-
-        return result.stream().distinct().collect(Collectors.toList());
-    }
 
 }
