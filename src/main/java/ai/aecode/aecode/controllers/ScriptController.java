@@ -1,5 +1,6 @@
 package ai.aecode.aecode.controllers;
 import ai.aecode.aecode.dtos.ScriptDTO;
+import ai.aecode.aecode.dtos.ScriptUpdateDTO;
 import ai.aecode.aecode.entities.Script;
 import ai.aecode.aecode.services.IScriptService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -153,10 +154,9 @@ public class ScriptController {
         return ResponseEntity.ok(datos);
     }
     @PutMapping
-    public void update(@RequestBody ScriptDTO dto) {
+    public void update(@RequestBody ScriptUpdateDTO dto) {
         ModelMapper m = new ModelMapper();
         Script s = m.map(dto, Script.class);
-        s.setScript_date(LocalDate.now());
         sS.insert(s);
     }
 

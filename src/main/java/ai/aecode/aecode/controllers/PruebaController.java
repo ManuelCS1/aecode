@@ -94,7 +94,8 @@ public class PruebaController {
         return dto;
     }
     @PutMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public ResponseEntity<String> update(@RequestPart(value="file", required = false) MultipartFile imagen,@RequestPart(value = "data", required = false) String dtoJson) throws JsonProcessingException {
+    public ResponseEntity<String> update(@RequestPart(value="file", required = false) MultipartFile imagen,
+                                         @RequestPart(value = "data", required = false) String dtoJson) throws JsonProcessingException {
         if (!imagen.isEmpty()) {
             try {
                 Path uploadPath = Paths.get(uploadDir);
