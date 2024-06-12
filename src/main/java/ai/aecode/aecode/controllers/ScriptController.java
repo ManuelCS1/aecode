@@ -1,6 +1,5 @@
 package ai.aecode.aecode.controllers;
 import ai.aecode.aecode.dtos.ScriptDTO;
-import ai.aecode.aecode.dtos.ScriptUpdateDTO;
 import ai.aecode.aecode.entities.Script;
 import ai.aecode.aecode.services.IScriptService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -13,13 +12,11 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -34,7 +31,7 @@ public class ScriptController {
     @Autowired
     private IScriptService sS;
 
-   @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<String> insert(@RequestPart(value="Smultimedia", required = false) MultipartFile[] multimedia,
                                          @RequestPart(value="Sscript", required = false) MultipartFile scriptfile,
                                          @RequestPart(value = "Sdata", required = false) String dtoJson) {
@@ -154,7 +151,7 @@ public class ScriptController {
         return ResponseEntity.ok(datos);
     }
     @PutMapping
-    public void update(@RequestBody ScriptUpdateDTO dto) {
+    public void update(@RequestBody ScriptDTO dto) {
         ModelMapper m = new ModelMapper();
         Script s = m.map(dto, Script.class);
         sS.insert(s);

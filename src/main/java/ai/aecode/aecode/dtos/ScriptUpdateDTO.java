@@ -6,6 +6,7 @@ import java.util.Set;
 
 public class ScriptUpdateDTO {
     private int id_script;
+    private String script_name;
     private Set<Tag> tag;
     private String script_description;
 
@@ -15,6 +16,14 @@ public class ScriptUpdateDTO {
 
     public void setId_script(int id_script) {
         this.id_script = id_script;
+    }
+
+    public String getScript_name() {
+        return script_name;
+    }
+
+    public void setScript_name(String script_name) {
+        this.script_name = script_name;
     }
 
     public Set<Tag> getTag() {
