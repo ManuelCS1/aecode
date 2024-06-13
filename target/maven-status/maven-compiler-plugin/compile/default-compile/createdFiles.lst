@@ -22,8 +22,10 @@ ai\aecode\aecode\dtos\ScriptDTO.class
 ai\aecode\aecode\controllers\StaticTableScript\SoftwareController.class
 ai\aecode\aecode\entities\Course.class
 ai\aecode\aecode\entities\Role.class
+ai\aecode\aecode\entities\Commentforo.class
 ai\aecode\aecode\entities\InteractionScript\LikeScript.class
 ai\aecode\aecode\entities\Software.class
+ai\aecode\aecode\servicesimplement\CommentforoServiceImplement.class
 ai\aecode\aecode\services\InteractionScript\IShareScriptService.class
 ai\aecode\aecode\ServletInitializer.class
 ai\aecode\aecode\services\ISpecialityService.class
@@ -33,6 +35,7 @@ ai\aecode\aecode\entities\Script.class
 ai\aecode\aecode\entities\Article.class
 ai\aecode\aecode\services\ServTableScript\ISoftwareService.class
 ai\aecode\aecode\repositories\InteractionScript\ICommentScriptRepository.class
+ai\aecode\aecode\controllers\CommentforoController.class
 ai\aecode\aecode\controllers\PruebaController.class
 ai\aecode\aecode\dtos\PruebaDTO.class
 ai\aecode\aecode\dtos\tsscript\CurrencyDTO.class
@@ -98,9 +101,12 @@ ai\aecode\aecode\controllers\ArticleController.class
 ai\aecode\aecode\dtos\SpecialityDTO.class
 ai\aecode\aecode\services\InteractionScript\ILikeScriptService.class
 ai\aecode\aecode\repositories\InteractionScript\ILikeScriptRepository.class
+ai\aecode\aecode\services\ICommentforoService.class
 ai\aecode\aecode\repositories\RepoTableScript\IProgLangRepository.class
 ai\aecode\aecode\services\ICourseService.class
 ai\aecode\aecode\dtos\ProfileDTO.class
+ai\aecode\aecode\dtos\CommentforoDTO.class
+ai\aecode\aecode\repositories\ICommentforoRepository.class
 ai\aecode\aecode\services\IRoleService.class
 ai\aecode\aecode\controllers\InteractionScript\LikeScriptController.class
 ai\aecode\aecode\servicesimplement\InteractionScript\ShareScriptServiceImplement.class
