@@ -1,118 +1,118 @@
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\controllers\ProfileController.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\controllers\SpecialityController.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\entities\InteractionScript\LikeScript.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\entities\ProgLang.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\entities\Post.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\repositories\IRoleRepository.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\controllers\InteractionScript\ShareScriptController.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\services\ServTableScript\IProgLangService.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\dtos\PlanDTO.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\dtos\tsscript\SoftwareDTO.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\entities\Speciality.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\dtos\InteractionScript\CommentScriptDTO.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\ServITableScript\ProgLangServiceImplement.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\controllers\Profile_detailController.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\ProfileServiceImplement.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\services\IProfileService.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\dtos\CourseDTO.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\entities\Plan.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\entities\Article.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\repositories\InteractionScript\ISaveScriptRepository.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\services\IPruebaService.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\PlanServiceImplement.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\RoleServiceImplement.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\InteractionScript\CommentScriptServiceImplement.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\repositories\RepoTableScript\ITagRepository.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\controllers\RoleController.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\controllers\PostController.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\controllers\StaticTableScript\CurrencyController.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\dtos\ScriptDTO.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\dtos\PostDTO.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\dtos\tsscript\ProgLangDTO.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\CourseServiceImplement.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\controllers\StaticTableScript\ProgLangController.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\dtos\tsscript\CurrencyDTO.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\entities\Commentforo.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\entities\Profile_detail.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\controllers\PruebaController.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\services\IRoleService.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\InteractionScript\LikeScriptServiceImplement.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\services\ISpecialityService.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\dtos\CommentforoDTO.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\config\CorsConfig.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\repositories\ICommentforoRepository.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\dtos\InteractionScript\SaveScriptDTO.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\entities\Software.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\services\IScriptService.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\repositories\IPruebaRepository.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\repositories\IProfile_detailRepository.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\ServITableScript\TagServiceImplement.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\ServletInitializer.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\services\IArticleService.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\CommentforoServiceImplement.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\entities\Course.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\ScriptServiceImplement.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\dtos\RoleDTO.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\dtos\SpecialityDTO.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\repositories\InteractionScript\ICommentScriptRepository.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\services\InteractionScript\IShareScriptService.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\entities\Prueba.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\repositories\RepoTableScript\IProgLangRepository.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\entities\InteractionScript\CommentScript.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\repositories\IProfileRepository.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\dtos\LoginDTO.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\controllers\StaticTableScript\TagController.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\repositories\InteractionScript\ILikeScriptRepository.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\SpecialityServiceImplement.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\dtos\tsscript\TagDTO.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\PruebaServiceImplement.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\ServITableScript\SoftwareServiceImplement.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\entities\Tag.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\dtos\ProfileDTO.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\controllers\CommentforoController.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\services\InteractionScript\ICommentScriptService.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\dtos\ArticleDTO.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\entities\InteractionScript\ShareScript.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\entities\InteractionScript\SaveScript.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\services\IPostService.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\controllers\ScriptController.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\dtos\InteractionScript\LikeScriptDTO.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\ArticleServiceImplement.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\dtos\PruebaDTO.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\PostServiceImplement.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\entities\Role.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\repositories\IPostRepository.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\dtos\ScriptUpdateDTO.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\controllers\InteractionScript\SaveScriptController.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\repositories\InteractionScript\IShareScriptRepository.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\services\InteractionScript\ISaveScriptService.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\dtos\InteractionScript\ShareScriptDTO.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\services\ServTableScript\ISoftwareService.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\InteractionScript\SaveScriptServiceImplement.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\services\ICommentforoService.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\services\IProfile_detailService.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\ServITableScript\CurrencyServiceImplement.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\controllers\StaticTableScript\SoftwareController.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\services\InteractionScript\ILikeScriptService.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\controllers\ArticleController.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\entities\Currency.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\repositories\IPlanRepository.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\controllers\InteractionScript\LikeScriptController.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\repositories\ICourseRepository.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\InteractionScript\ShareScriptServiceImplement.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\repositories\IArticleRepository.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\repositories\ISpecialityRepository.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\entities\Script.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\services\ICourseService.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\repositories\IScriptRepository.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\services\IPlanService.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\services\ServTableScript\ICurrencyService.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\entities\Profile.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\Profile_detailServiceImplement.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\repositories\RepoTableScript\ICurrencyRepository.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\repositories\RepoTableScript\ISoftwareRepository.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\dtos\Profile_detailDTO.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\controllers\InteractionScript\CommentScriptController.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\services\ServTableScript\ITagService.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\controllers\PlanController.java
-C:\Users\MANUEL\OneDrive\Escritorio\manuel\Trabajo_Back_2\aecode\src\main\java\ai\aecode\aecode\AecodeApplication.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\services\InteractionScript\ISaveScriptService.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\controllers\SpecialityController.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\SpecialityServiceImplement.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\controllers\Profile_detailController.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\repositories\RepoTableScript\ICurrencyRepository.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\entities\Course.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\entities\InteractionScript\LikeScript.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\controllers\PlanController.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\ArticleServiceImplement.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\dtos\ProfileDTO.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\dtos\ArticleDTO.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\repositories\InteractionScript\ILikeScriptRepository.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\PostServiceImplement.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\entities\InteractionScript\ShareScript.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\entities\Prueba.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\controllers\StaticTableScript\ProgLangController.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\entities\Profile_detail.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\PlanServiceImplement.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\repositories\RepoTableScript\ITagRepository.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\services\IRoleService.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\ServITableScript\TagServiceImplement.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\dtos\CommentforoDTO.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\repositories\ICommentforoRepository.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\controllers\ScriptController.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\dtos\tsscript\SoftwareDTO.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\dtos\CourseDTO.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\entities\Script.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\services\ServTableScript\IProgLangService.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\controllers\InteractionScript\LikeScriptController.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\controllers\StaticTableScript\TagController.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\entities\Tag.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\dtos\LoginDTO.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\dtos\SpecialityDTO.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\controllers\StaticTableScript\SoftwareController.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\Profile_detailServiceImplement.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\ServletInitializer.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\services\IArticleService.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\repositories\IProfile_detailRepository.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\repositories\IProfileRepository.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\controllers\RoleController.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\repositories\IArticleRepository.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\services\InteractionScript\IShareScriptService.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\controllers\InteractionScript\SaveScriptController.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\dtos\PostDTO.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\ServITableScript\ProgLangServiceImplement.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\dtos\InteractionScript\LikeScriptDTO.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\entities\Profile.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\dtos\PlanDTO.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\repositories\ICourseRepository.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\services\InteractionScript\ILikeScriptService.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\services\IProfile_detailService.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\services\ICourseService.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\controllers\CommentforoController.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\repositories\RepoTableScript\ISoftwareRepository.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\entities\Speciality.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\services\ServTableScript\ISoftwareService.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\services\InteractionScript\ICommentScriptService.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\AecodeApplication.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\repositories\InteractionScript\ICommentScriptRepository.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\dtos\Profile_detailDTO.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\PruebaServiceImplement.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\entities\InteractionScript\SaveScript.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\repositories\IRoleRepository.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\dtos\RoleDTO.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\entities\Currency.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\dtos\tsscript\ProgLangDTO.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\dtos\tsscript\CurrencyDTO.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\services\IPlanService.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\services\IScriptService.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\services\ServTableScript\ICurrencyService.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\CourseServiceImplement.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\InteractionScript\ShareScriptServiceImplement.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\entities\ProgLang.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\entities\Role.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\InteractionScript\CommentScriptServiceImplement.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\dtos\ScriptDTO.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\repositories\IPruebaRepository.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\entities\Post.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\entities\Plan.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\services\ServTableScript\ITagService.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\dtos\InteractionScript\SaveScriptDTO.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\dtos\PruebaDTO.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\dtos\ScriptUpdateDTO.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\repositories\IScriptRepository.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\InteractionScript\SaveScriptServiceImplement.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\controllers\StaticTableScript\CurrencyController.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\services\IPruebaService.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\entities\Commentforo.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\controllers\InteractionScript\CommentScriptController.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\repositories\IPostRepository.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\controllers\PruebaController.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\controllers\InteractionScript\ShareScriptController.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\InteractionScript\LikeScriptServiceImplement.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\repositories\ISpecialityRepository.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\dtos\InteractionScript\ShareScriptDTO.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\dtos\InteractionScript\CommentScriptDTO.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\services\IProfileService.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\repositories\InteractionScript\ISaveScriptRepository.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\entities\Article.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\CommentforoServiceImplement.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\services\ICommentforoService.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\controllers\PostController.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\entities\InteractionScript\CommentScript.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\repositories\IPlanRepository.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\RoleServiceImplement.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\dtos\tsscript\TagDTO.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\services\IPostService.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\services\ISpecialityService.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\controllers\ProfileController.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\repositories\InteractionScript\IShareScriptRepository.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\ServITableScript\CurrencyServiceImplement.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\controllers\ArticleController.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\entities\Software.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\repositories\RepoTableScript\IProgLangRepository.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\ScriptServiceImplement.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\config\CorsConfig.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\ServITableScript\SoftwareServiceImplement.java
+C:\Users\MANUEL\OneDrive\Escritorio\manuel\AECODE 2\aecode\src\main\java\ai\aecode\aecode\servicesimplement\ProfileServiceImplement.java
